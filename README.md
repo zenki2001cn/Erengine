@@ -8,13 +8,11 @@ A book reader engine
 Changed log
 ==========
 
- *
-0.5.4
+* 0.5.4
 1. 优化FBReader的遍历列表的处理方式.
 2. 修正部分EPUB书段落第一行有多余空格导致显示的问题.
 
- * 
-0.5.3
+* 0.5.3
 1. 修改旋屏的接口方法，添加視圖的寬度和高度作為參數.(setScreenLandMode(boolean land, int viewWidth, int viewHeight))
 2. 調整FBReader對于<tr>、<td>標識的處理.(XHTMLTagTrAction.java, XHTMLTagTdAction.java, FBTextKind.java)
 3. 調整FBReader對于圖片元素的處理.(XHTMLTagImageAction.java)

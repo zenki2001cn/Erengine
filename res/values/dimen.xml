@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Start of Main -->
+	<dimen name="FontSize_Big">30px</dimen>
+	<dimen name="FontSize_Mid">25px</dimen>
+	<dimen name="FontSize_Small">17px</dimen>
+	<dimen name="FontSize_Eidt">20px</dimen>
+
+	<dimen name="PaddingHeight_Title">19px</dimen>
+	<dimen name="PaddingLeft_Title">55px</dimen>
+	<dimen name="PaddingLeft_Main">25px</dimen>
+	<dimen name="PaddingRight_Main">25px</dimen>
+	<dimen name="PaddingBottom_Bottom">1px</dimen>
+
+	<dimen name="PaddingLeft_Empty">55px</dimen>
+
+	<dimen name="LineView_Height">2px</dimen>
+	<dimen name="LineView_Margin">1px</dimen>
+
+	<dimen name="SortButton_Width">109px</dimen>
+	<dimen name="SortButton_Height">51px</dimen>
+	<dimen name="SortButtonText_PaddingLeft">15px</dimen>
+	<dimen name="HighLight_Width">87px</dimen>
+	<dimen name="HighLight_Height">10px</dimen>
+	<dimen name="HighLight_PaddingLeft">8px</dimen>
+	<dimen name="HighLight_PaddingRight">5px</dimen>
+
+	<dimen name="CheckBox_Width">20px</dimen>
+	<dimen name="CheckBox_Height">20px</dimen>
+	<dimen name="CheckBox_Padding">10px</dimen>
+
+	<dimen name="CloseWindow_Width">20px</dimen>
+	<dimen name="CloseWindow_Height">20px</dimen>
+	<dimen name="CloseWindow_Padding">10px</dimen>
+
+	<dimen name="Mode_Width">30px</dimen>
+	<dimen name="Mode_Height">30px</dimen>
+	<dimen name="Mode_Padding">10px</dimen>
+
+	<dimen name="FileRow_Padding">17px</dimen>
+
+	<!-- End of Main -->
+	<!-- Start of Menu -->
+	<dimen name="MenuList_Width">150dip</dimen>
+	<dimen name="MenuColseTextSize">20px</dimen>
+	<!-- End of Menu -->
+
+	<!-- Start of AddNote -->
+	<dimen name="ModeList_Padding_Left">30px</dimen>
+	<dimen name="ModeList_Padding_Top">20px</dimen>
+	<dimen name="ModeList_Padding_Bottom">20px</dimen>
+	<!-- End of Menu -->
+
+	<!-- Start of EditNote -->
+	<dimen name="EditTitle_Padding_Top">16px</dimen>
+	<dimen name="EditTitle_Padding_Bottom">4px</dimen>
+
+	<dimen name="EditButton_Width">109px</dimen>
+	<dimen name="EditButton_Height">51px</dimen>
+	<dimen name="EditButton_Padding_Top">8px</dimen>
+	<dimen name="EditButton_Padding_Bottom">8px</dimen>
+
+	<dimen name="HighLight_DiffLeft">8px</dimen>
+	<dimen name="HighLight_DiffRight">8px</dimen>
+	<dimen name="HighLight_DiffMiddle">24px</dimen>
+
+	<!-- EditText_Height: Decide MaxLineCnt -->
+	<dimen name="EditText_Height">220px</dimen>
+	<dimen name="EditText_Padding_Top">8px</dimen>
+	<dimen name="EditText_Padding_Bottom">8px</dimen>
+
+	<dimen name="Edit_Padding_Top">11px</dimen>
+	<dimen name="Edit_Padding_Bottom">11px</dimen>
+	<dimen name="Edit_Padding_Left">15px</dimen>
+	<dimen name="Edit_Padding_Right">15px</dimen>
+	<!-- Start of EditNote -->
+
+	<!-- Start of ReadNote -->
+	<dimen name="TextScrollView_Height">220px</dimen>
+	<dimen name="TextScrollView_PaddingTop">5px</dimen>
+	<!-- End of ReadNote -->
+
+
+	<!-- Start of ShowNote -->
+	<dimen name="ShowTitle_Padding_Top">18px</dimen>
+	<dimen name="ShowTitle_Padding_Bottom">20px</dimen>
+	<dimen name="ShowTitle_Padding_Left">25px</dimen>
+	<dimen name="ShowTitle_Padding_Right">50px</dimen>
+	<dimen name="PaintView_Height">630px</dimen>
+	<!-- End of ShowNote -->
+
+</resources>

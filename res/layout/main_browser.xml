@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/id_file_browser_main" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<RelativeLayout android:id="@+id/id_browser_wrapper"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		>
+		<ListView android:id="@+id/id_file_list"
+			android:layout_marginLeft="25px" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" />
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+com.foxconn.ebook.reader.engine.core
+com.foxconn.ebook.reader.engine.model
+com.foxconn.ebook.reader.engine.util
+com.foxconn.ebook.reader.engine.util.provider
+com.foxconn.ebook.reader.engine.util.recorder
+com.foxconn.ebook.reader.engine.util.render

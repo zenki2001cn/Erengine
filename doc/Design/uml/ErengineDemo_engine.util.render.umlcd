@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/0.9.0" xmi:id="_hTcl8IKqEeC7MdOfEg41YQ">
+  <modelElement href="ErengineDemo.uml#_bj9TkIKqEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TGgewYKtEeC7MdOfEg41YQ" sourceItem="_TGgewIKtEeC7MdOfEg41YQ" targetItem="_TGhs4IKtEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TGgew4KtEeC7MdOfEg41YQ" sourceItem="_TGgewoKtEeC7MdOfEg41YQ" targetItem="_TGhs4IKtEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TGgexYKtEeC7MdOfEg41YQ" sourceItem="_TGgexIKtEeC7MdOfEg41YQ" targetItem="_TGhs4IKtEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TGgex4KtEeC7MdOfEg41YQ" sourceItem="_TGgexoKtEeC7MdOfEg41YQ" targetItem="_TGhs4IKtEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_TGiT8IKtEeC7MdOfEg41YQ" sourceAnchor="43.0,0.0" targetAnchor="54.0,74.0" subClass="_TGlXQIKtEeC7MdOfEg41YQ" superClass="_TGhs4IKtEeC7MdOfEg41YQ">
+    <modelElement href="ErengineDemo.uml#_gOeh8IKqEeC7MdOfEg41YQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TGjiEYKtEeC7MdOfEg41YQ" sourceItem="_TGjiEIKtEeC7MdOfEg41YQ" targetItem="_TGlXQIKtEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TGjiE4KtEeC7MdOfEg41YQ" sourceItem="_TGjiEoKtEeC7MdOfEg41YQ" targetItem="_TGlXQIKtEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TGjiFYKtEeC7MdOfEg41YQ" sourceItem="_TGjiFIKtEeC7MdOfEg41YQ" targetItem="_TGlXQIKtEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_TGjiF4KtEeC7MdOfEg41YQ" sourceItem="_TGjiFoKtEeC7MdOfEg41YQ" targetItem="_TGlXQIKtEeC7MdOfEg41YQ"/>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TGgewIKtEeC7MdOfEg41YQ" item="_TGhs4IKtEeC7MdOfEg41YQ" sourceConnectionVisual="_TGgewYKtEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_gWenY4KqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7OgQIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7OgQYKtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7OgQoKtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TGgewoKtEeC7MdOfEg41YQ" item="_TGhs4IKtEeC7MdOfEg41YQ" sourceConnectionVisual="_TGgew4KtEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_fTE0MIKrEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7OgQ4KtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7OgRIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7OgRYKtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TGgexIKtEeC7MdOfEg41YQ" item="_TGhs4IKtEeC7MdOfEg41YQ" sourceConnectionVisual="_TGgexYKtEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_Sv5VkIKtEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7OgRoKtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7OgR4KtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7OgSIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TGgexoKtEeC7MdOfEg41YQ" item="_TGhs4IKtEeC7MdOfEg41YQ" sourceConnectionVisual="_TGgex4KtEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_Sv5VkYKtEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7OgSYKtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7OgSoKtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7OgS4KtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TGhs4IKtEeC7MdOfEg41YQ" comments="_TGgewIKtEeC7MdOfEg41YQ _TGgewoKtEeC7MdOfEg41YQ _TGgexIKtEeC7MdOfEg41YQ _TGgexoKtEeC7MdOfEg41YQ" targetConnectionVisual="_TGgewYKtEeC7MdOfEg41YQ _TGgew4KtEeC7MdOfEg41YQ _TGgexYKtEeC7MdOfEg41YQ _TGgex4KtEeC7MdOfEg41YQ" name="BaseRender" abstractClass="true" subclassedBy="_TGiT8IKtEeC7MdOfEg41YQ">
+    <modelElement href="ErengineDemo.uml#_fwGj4IKqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7OgTIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PHUIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PHUYKtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_TGhs8YKtEeC7MdOfEg41YQ" position="10.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TGhs4YKtEeC7MdOfEg41YQ" label="+"/>
+    <attributes xmi:id="_TGhs4oKtEeC7MdOfEg41YQ" defaultValue="&quot;BaseRender&quot;" name="TAG" staticAttribute="true">
+      <modelElement href="ErengineDemo.uml#_gULhUIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_TGhs44KtEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gULhUoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_TGhs5IKtEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_TGhs5YKtEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_TGhs5oKtEeC7MdOfEg41YQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_TGhs54KtEeC7MdOfEg41YQ" abstractOperation="true" name="init">
+      <modelElement href="ErengineDemo.uml#_fwHK8IKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_TGhs6IKtEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fwHyAIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_TGhs6YKtEeC7MdOfEg41YQ" label="+"/>
+    </operations>
+    <operations xmi:id="_TGhs6oKtEeC7MdOfEg41YQ" abstractOperation="true" name="free">
+      <modelElement href="ErengineDemo.uml#_fwHyAYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_TGhs64KtEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fwHyAoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_TGhs7IKtEeC7MdOfEg41YQ" label="+"/>
+    </operations>
+    <operations xmi:id="_TGhs7YKtEeC7MdOfEg41YQ" name="showContent">
+      <modelElement href="ErengineDemo.uml#_gOdT0IKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_TGhs7oKtEeC7MdOfEg41YQ" label="+"/>
+      <parameters xmi:id="_TGhs74KtEeC7MdOfEg41YQ" name="page">
+        <modelElement href="ErengineDemo.uml#_gOdT0YKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_TGhs8IKtEeC7MdOfEg41YQ" name="Page">
+          <modelElement href="ErengineDemo.uml#_fu1YkIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TGjiEIKtEeC7MdOfEg41YQ" item="_TGlXQIKtEeC7MdOfEg41YQ" sourceConnectionVisual="_TGjiEYKtEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_gWfOcIKqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7PHUoKtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PHU4KtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PHVIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TGjiEoKtEeC7MdOfEg41YQ" item="_TGlXQIKtEeC7MdOfEg41YQ" sourceConnectionVisual="_TGjiE4KtEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_dD61AIKrEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7PuYIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PuYYKtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PuYoKtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TGjiFIKtEeC7MdOfEg41YQ" item="_TGlXQIKtEeC7MdOfEg41YQ" sourceConnectionVisual="_TGjiFYKtEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_Sv5VkoKtEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7PuY4KtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PuZIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PuZYKtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_TGjiFoKtEeC7MdOfEg41YQ" item="_TGlXQIKtEeC7MdOfEg41YQ" sourceConnectionVisual="_TGjiF4KtEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_Sv5Vk4KtEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7PuZoKtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PuZ4KtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PuaIKtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_TGlXQIKtEeC7MdOfEg41YQ" comments="_TGjiEIKtEeC7MdOfEg41YQ _TGjiEoKtEeC7MdOfEg41YQ _TGjiFIKtEeC7MdOfEg41YQ _TGjiFoKtEeC7MdOfEg41YQ" targetConnectionVisual="_TGjiEYKtEeC7MdOfEg41YQ _TGjiE4KtEeC7MdOfEg41YQ _TGjiFYKtEeC7MdOfEg41YQ _TGjiF4KtEeC7MdOfEg41YQ" name="Render2" generalizations="_TGiT8IKtEeC7MdOfEg41YQ">
+    <modelElement href="ErengineDemo.uml#_fwIZEIKqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_T7PuaYKtEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_T7PuaoKtEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_T7Pua4KtEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_TGl-UIKtEeC7MdOfEg41YQ" position="21.0,121.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_TGlXQYKtEeC7MdOfEg41YQ" label="+"/>
+    <attributes xmi:id="_TGlXQoKtEeC7MdOfEg41YQ" defaultValue="&quot;Render2&quot;" name="TAG" staticAttribute="true">
+      <modelElement href="ErengineDemo.uml#_gUMIYIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_TGlXQ4KtEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gUMvcIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_TGlXRIKtEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_TGlXRYKtEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_TGlXRoKtEeC7MdOfEg41YQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_TGlXR4KtEeC7MdOfEg41YQ" name="mViewContent">
+      <modelElement href="ErengineDemo.uml#_gUMvcYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_TGlXSIKtEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gUMvcoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_TGlXSYKtEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_TGlXSoKtEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_TGlXS4KtEeC7MdOfEg41YQ" name="ImageView">
+        <modelElement href="ErengineDemo.uml#_gQ5j0YKqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_TGlXTIKtEeC7MdOfEg41YQ" name="Render2">
+      <modelElement href="ErengineDemo.uml#_fwJnMIKqEeC7MdOfEg41YQ"/>
+      <keywords xmi:id="_TGlXTYKtEeC7MdOfEg41YQ" keyword="create"/>
+      <visibility xmi:id="_TGlXToKtEeC7MdOfEg41YQ" label="+"/>
+      <outParameters xmi:id="_TGlXT4KtEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fwJnM4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_TGlXUIKtEeC7MdOfEg41YQ" name="Render2">
+          <modelElement href="ErengineDemo.uml#_fwIZEIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_TGlXUYKtEeC7MdOfEg41YQ" name="init">
+      <modelElement href="ErengineDemo.uml#_fwJnNIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_TGlXUoKtEeC7MdOfEg41YQ" label="+"/>
+    </operations>
+    <operations xmi:id="_TGlXU4KtEeC7MdOfEg41YQ" name="free">
+      <modelElement href="ErengineDemo.uml#_fwKOQIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_TGlXVIKtEeC7MdOfEg41YQ" label="+"/>
+    </operations>
+    <operations xmi:id="_TGlXVYKtEeC7MdOfEg41YQ" name="showContent">
+      <modelElement href="ErengineDemo.uml#_gOfJAIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_TGlXVoKtEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gOfJAoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_TGlXV4KtEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_gOfwEIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_TGlXWIKtEeC7MdOfEg41YQ" label="+"/>
+      <parameters xmi:id="_TGlXWYKtEeC7MdOfEg41YQ" name="page">
+        <modelElement href="ErengineDemo.uml#_gOfJAYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_TGlXWoKtEeC7MdOfEg41YQ" name="Page">
+          <modelElement href="ErengineDemo.uml#_fu1YkIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_TGlXW4KtEeC7MdOfEg41YQ" name="Render2">
+      <modelElement href="ErengineDemo.uml#_gQ6K4YKqEeC7MdOfEg41YQ"/>
+      <keywords xmi:id="_TGlXXIKtEeC7MdOfEg41YQ" keyword="create"/>
+      <visibility xmi:id="_TGlXXYKtEeC7MdOfEg41YQ" label="+"/>
+      <outParameters xmi:id="_TGlXXoKtEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gQ6x8IKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_TGlXX4KtEeC7MdOfEg41YQ" name="Render2">
+          <modelElement href="ErengineDemo.uml#_fwIZEIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_TGlXYIKtEeC7MdOfEg41YQ" name="view">
+        <modelElement href="ErengineDemo.uml#_gQ6K4oKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_TGlXYYKtEeC7MdOfEg41YQ" name="ImageView">
+          <modelElement href="ErengineDemo.uml#_gQ5j0YKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_TGlXYoKtEeC7MdOfEg41YQ" name="setView">
+      <modelElement href="ErengineDemo.uml#_gQ6x8YKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_TGlXY4KtEeC7MdOfEg41YQ" label="+"/>
+      <parameters xmi:id="_TGlXZIKtEeC7MdOfEg41YQ" name="view">
+        <modelElement href="ErengineDemo.uml#_gQ6x8oKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_TGlXZYKtEeC7MdOfEg41YQ" name="ImageView">
+          <modelElement href="ErengineDemo.uml#_gQ5j0YKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

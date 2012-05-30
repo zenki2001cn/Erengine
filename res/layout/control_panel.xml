@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+	<com.foxconn.ebook.reader.ui.view.ControlPanelLayout
+		android:id="@+id/id_panel_wrapper" android:layout_width="400px"
+		android:layout_height="400px" android:orientation="vertical">
+
+		<!-- 标题栏 -->
+		<RelativeLayout android:id="@+id/id_title_wrapper"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:visibility="visible">
+			<TextView android:id="@+id/id_panel_title" android:text="@string/panel_title"
+				android:layout_marginLeft="160px" android:layout_marginTop="5px"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+			</TextView>
+
+			<Button android:id="@+id/id_back_btn" android:text="@string/panel_back"
+				android:layout_marginLeft="335px" android:layout_marginTop="5px"
+				android:layout_width="40px" android:layout_height="20px">
+			</Button>
+		</RelativeLayout>
+
+		<!-- 章节列表栏 -->
+		<RelativeLayout android:id="@+id/id_topic_wrapper"
+			android:tag="@string/col_topic" android:layout_marginTop="40px"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:visibility="invisible">
+			<ListView android:id="@+id/id_topic_list"
+				android:layout_marginLeft="25px" android:layout_width="350px"
+				android:layout_height="350px" >
+			</ListView>
+		</RelativeLayout>
+
+		<!-- 跳頁栏 -->
+		<com.foxconn.ebook.reader.ui.view.JumpWapperPanelLayout
+			android:tag="@string/col_jump" android:id="@+id/id_jump_wrapper"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:visibility="invisible" android:layout_marginLeft="35px">
+
+			<RelativeLayout android:id="@+id/id_jump_page"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginTop="40px">
+				<EditText android:id="@+id/id_jump_page_number"
+					android:maxLength="6" android:numeric="integer" android:inputType="none"
+					android:layout_width="240px" android:layout_height="40px" />
+				<Button android:id="@+id/id_jump_page_btn" android:text="@string/gotoPage"
+					android:layout_toRightOf="@+id/id_jump_page_number"
+					android:layout_width="80px" android:layout_height="40px" />
+			</RelativeLayout>
+
+			<TableLayout android:id="@+id/id_num_table"
+				android:layout_marginTop="5px" android:layout_below="@+id/id_jump_page"
+				android:layout_height="350px" android:layout_width="320px"
+				android:stretchColumns="0,1,2,3">
+
+				<TableRow>
+					<Button android:id="@+id/id_jump_num_1" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_1" android:tag="1" />
+					<Button android:id="@+id/id_jump_num_2" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_2" android:tag="2" />
+					<Button android:id="@+id/id_jump_num_3" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_3" android:tag="3" />
+					<Button android:id="@+id/id_jump_del" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_del" />
+				</TableRow>
+
+				<TableRow>
+					<Button android:id="@+id/id_jump_num_4" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_4" android:tag="4" />
+					<Button android:id="@+id/id_jump_num_5" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_5" android:tag="5" />
+					<Button android:id="@+id/id_jump_num_6" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_6" android:tag="6" />
+					<Button android:id="@+id/id_jump_num_0" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_0" android:tag="0" />
+				</TableRow>
+
+				<TableRow>
+					<Button android:id="@+id/id_jump_num_7" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_7" android:tag="7" />
+					<Button android:id="@+id/id_jump_num_8" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_8" android:tag="8" />
+					<Button android:id="@+id/id_jump_num_9" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_9" android:tag="9" />
+					<Button android:id="@+id/id_jump_clean" android:minWidth="70px"
+						android:minHeight="70px" android:text="@string/num_clean" />
+				</TableRow>
+
+			</TableLayout>
+
+			<RelativeLayout android:id="@+id/id_jump_chapter"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginTop="300px">
+				<Button android:id="@+id/id_jump_pre_chapter" android:text="@string/pre_chapter"
+					android:layout_width="105px" android:layout_height="50px" />
+				<Button android:id="@+id/id_jump_chapter_list" android:text="@string/list_chapter"
+					android:layout_toRightOf="@+id/id_jump_pre_chapter"
+					android:layout_width="105px" android:layout_height="50px" />
+				<Button android:id="@+id/id_jump_next_chapter" android:text="@string/next_chapter"
+					android:layout_toRightOf="@+id/id_jump_chapter_list"
+					android:layout_width="105px" android:layout_height="50px" />
+			</RelativeLayout>
+		</com.foxconn.ebook.reader.ui.view.JumpWapperPanelLayout>
+
+		<!-- 书签栏 -->
+		<com.foxconn.ebook.reader.ui.view.BookmarkPanelLayout
+			android:id="@+id/id_bookmark_wrapper" 
+			android:tag="@string/col_bookmark" android:layout_marginTop="40px"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:visibility="invisible">
+			<ListView android:id="@+id/id_bookmark_list"
+				android:layout_marginLeft="25px" android:layout_width="350px"
+				android:layout_height="300px" />
+			<Button android:id="@+id/id_bookmark_add" android:text="@string/bookmark_menu_add_bookmark"
+				android:layout_below="@+id/id_bookmark_list" android:layout_marginLeft="50px"
+				android:layout_width="150px" android:layout_height="50px" />
+			<Button android:id="@+id/id_bookmark_clean" android:text="@string/bookmark_clean"
+				android:layout_below="@+id/id_bookmark_list" android:layout_toRightOf="@+id/id_bookmark_add"
+				android:layout_width="150px" android:layout_height="50px" />
+		</com.foxconn.ebook.reader.ui.view.BookmarkPanelLayout>
+
+		<!-- 總控制台 -->
+		<RelativeLayout android:id="@+id/id_control_panel_wrapper"
+			android:tag="@string/panel_title" android:layout_marginTop="40px"
+			android:layout_width="wrap_content" android:layout_height="wrap_content">
+			<TableLayout android:id="@+id/id_control_panel"
+				android:layout_marginLeft="25px" android:layout_height="350px"
+				android:layout_width="360px">
+				<TableRow>
+					<Button android:id="@+id/id_col1_topic"
+						android:layout_column="0" android:text="@string/col_topic"
+						android:minWidth="110px" android:minHeight="110px"
+						android:padding="5px" />
+					<Button android:id="@+id/id_col2_jump"
+						android:layout_column="0" android:text="@string/col_jump"
+						android:minWidth="110px" android:minHeight="110px"
+						android:padding="5px" />
+
+					<Button android:id="@+id/id_col3_search" android:text="@string/col_search"
+						android:minWidth="110px" android:minHeight="110px"
+						android:padding="5px" />
+
+				</TableRow>
+
+				<TableRow>
+					<Button android:id="@+id/id_col4_bookmark" android:text="@string/col_bookmark"
+						android:minWidth="110px" android:minHeight="110px"
+						android:padding="5px" />
+					<Button android:id="@+id/id_col5_xxx" android:text="@string/col_5_xxx"
+						android:minWidth="110px" android:minHeight="110px"
+						android:padding="5px" />
+					<Button android:id="@+id/id_col6_xxx" android:text="@string/col_6_xxx"
+						android:minWidth="110px" android:minHeight="110px"
+						android:padding="5px" />
+				</TableRow>
+
+				<TableRow>
+					<Button android:id="@+id/id_col7_xxx" android:layout_column="0"
+						android:text="@string/col_7_xxx" android:minWidth="110px"
+						android:minHeight="110px" android:padding="5px" />
+					<Button android:id="@+id/id_col8_xxx" android:text="@string/col_8_xxx"
+						android:minWidth="110px" android:minHeight="110px"
+						android:padding="5px" />
+
+					<Button android:id="@+id/id_col9_exit" android:text="@string/col_exit"
+						android:minWidth="110px" android:minHeight="110px"
+						android:padding="5px" />
+				</TableRow>
+			</TableLayout>
+		</RelativeLayout>
+
+	</com.foxconn.ebook.reader.ui.view.ControlPanelLayout>
+</LinearLayout>

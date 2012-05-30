@@ -1,0 +1,135 @@
+file filter = c,C,c++,cc,cp,cpp,cxx,h,H,h++,hh,hp,hpp,hxx,inl,ipp,cs,java,hlsl,vsh,psh,fx,fxh,cg,shd,glsl,py,pyw,pyx,pxd,vim,uc,m,wiki,ini,cfg,mak,mk,Makefile,makefile,sh,SH,bsh,bash,ksh,zsh,bat,log,err,exe,qrc,pro,pri,
+dir filter = 
+
+-[F]doc {
+ |-[F]docgen {
+ | |-[F]adobe {
+ | | |-[j]AdobeAction.java
+ | | |-[j]AdobeAdapter.java }
+ | |
+ | |-[F]charsetcodec {
+ | | |-[j]CharsetDetector2.java
+ | | |-[j]CharsetDetectorProxy.java
+ | | |-[j]ICharsetDetect.java
+ | | |-[j]JCharDetector.java
+ | | |-[j]UnicodeDetector.java }
+ | |
+ | |-[F]comments {
+ | | |-[j]BaseCommentEngine.java
+ | | |-[j]CommentEngineCPU.java
+ | | |-[j]CommentEngineEPD.java
+ | | |-[j]CommentHandler.java
+ | | |-[j]CommentModel.java
+ | | |-[j]CommentView.java
+ | | |-[j]ICommentHandlerCall.java }
+ | |
+ | |-[F]core {
+ | | |-[F]adobe {
+ | | | |-[j]AdobeAction.java
+ | | | |-[j]AdobeAdapter.java }
+ | | |
+ | | |-[F]fbreader {
+ | | | |-[j]FbreaderAction.java
+ | | | |-[j]FbreaderAdapter.java }
+ | | |
+ | | |-[j]Action.java
+ | | |-[j]Comments.java
+ | | |-[j]DecAdapter.java
+ | | |-[j]EngineCode.java
+ | | |-[j]EREngine.java
+ | | |-[j]IActionCall.java
+ | | |-[j]IEREngineService.java
+ | | |-[j]IErrorCall.java
+ | | |-[j]TaskManager.java }
+ | |
+ | |-[F]fbreader {
+ | | |-[j]FbreaderAction.java
+ | | |-[j]FbreaderAdapter.java }
+ | |
+ | |-[F]model {
+ | | |-[F]strategy {
+ | | | |-[j]IHasChapter.java
+ | | | |-[j]JudgeByChapterList.java
+ | | | |-[j]JudgeByTotalChapterNumber.java }
+ | | |
+ | | |-[j]AdobePage.java
+ | | |-[j]Book.java
+ | | |-[j]BookEmphasisInfo.java
+ | | |-[j]BookMarkInfo.java
+ | | |-[j]BookSearchInfo.java
+ | | |-[j]ChapterTree.java
+ | | |-[j]FbreaderPage.java
+ | | |-[j]HyfPage.java
+ | | |-[j]IBookEmphasisOps.java
+ | | |-[j]IBookmarkOps.java
+ | | |-[j]IBookSearchOps.java
+ | | |-[j]Page.java }
+ | |
+ | |-[F]motion {
+ | | |-[j]GestureBoard.java
+ | | |-[j]GestureManager.java
+ | | |-[j]GestureObject.java
+ | | |-[j]HorizontalDirection.java
+ | | |-[j]IGestureManager.java
+ | | |-[j]IMotionCall.java
+ | | |-[j]IMotionManager.java
+ | | |-[j]MotionDirection.java
+ | | |-[j]MotionManager.java
+ | | |-[j]VerticalDirection.java }
+ | |
+ | |-[F]recorder {
+ | | |-[j]BaseRecorder.java
+ | | |-[j]FileRecorder.java }
+ | |
+ | |-[F]render {
+ | | |-[j]BaseRender.java
+ | | |-[j]Render2.java }
+ | |
+ | |-[F]strategy {
+ | | |-[j]IHasChapter.java
+ | | |-[j]JudgeByChapterList.java
+ | | |-[j]JudgeByTotalChapterNumber.java }
+ | |
+ | |-[F]util {
+ |   |-[F]charsetcodec {
+ |   | |-[j]CharsetDetector2.java
+ |   | |-[j]CharsetDetectorProxy.java
+ |   | |-[j]ICharsetDetect.java
+ |   | |-[j]JCharDetector.java
+ |   | |-[j]UnicodeDetector.java }
+ |   |
+ |   |-[F]comments {
+ |   | |-[j]BaseCommentEngine.java
+ |   | |-[j]CommentEngineCPU.java
+ |   | |-[j]CommentEngineEPD.java
+ |   | |-[j]CommentHandler.java
+ |   | |-[j]CommentModel.java
+ |   | |-[j]CommentView.java
+ |   | |-[j]ICommentHandlerCall.java }
+ |   |
+ |   |-[F]motion {
+ |   | |-[j]GestureBoard.java
+ |   | |-[j]GestureManager.java
+ |   | |-[j]GestureObject.java
+ |   | |-[j]HorizontalDirection.java
+ |   | |-[j]IGestureManager.java
+ |   | |-[j]IMotionCall.java
+ |   | |-[j]IMotionManager.java
+ |   | |-[j]MotionDirection.java
+ |   | |-[j]MotionManager.java
+ |   | |-[j]VerticalDirection.java }
+ |   |
+ |   |-[F]recorder {
+ |   | |-[j]BaseRecorder.java
+ |   | |-[j]FileRecorder.java }
+ |   |
+ |   |-[F]render {
+ |   | |-[j]BaseRender.java
+ |   | |-[j]Render2.java }
+ |   |
+ |   |-[j]EngineConfig.java
+ |   |-[j]Logger.java } }
+ |
+ |-[s]quick_gen_project_entry_autogen.sh }
+
+

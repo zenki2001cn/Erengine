@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- main.xml -->
+	<string name="app_name">EasyViewer</string>
+	<string name="alert_illegal_page">页码无效</string>
+	<string name="sure">确定</string>
+	<string name="ask_alert_illegal_page">输入页码无效，请确认!</string>
+	<string name="loading">装载书籍中</string>
+	<string name="password">请输入密码</string>
+	<string name="default_page">页码</string>
+	<string name="book_title">书名</string>
+	<string name="load_chapter">加载章节</string>
+	<string name="jump_page">跳转页码</string>
+	<string name="jump_chapter">跳转章节--</string>
+	<string name="chapter_up">上一个章节--</string>
+	<string name="chapter_down">下一个章节--</string>
+	<string name="zoom_in">字体放大</string>
+	<string name="zoom_out">字体缩小</string>
+	<string name="min_font">字体已经最小</string>
+	<string name="max_font">字体已经最大</string>
+	<string name="zoom_tip">上下移动缩放字体\n左右移动翻页</string>
+	
+	<!-- control_panel.xml -->
+	<string name="col_topic">目录</string>
+	<string name="col_jump">跳转</string>
+	<string name="col_search">查找</string>
+	<string name="col_bookmark">书签</string>
+	<string name="col_5_xxx">批注</string>
+	<string name="col_6_xxx">朗读</string>
+	<string name="col_7_xxx">音乐</string>
+	<string name="col_8_xxx">书城</string>
+	<string name="col_exit">退出</string>
+	<string name="panel_title">控制面板</string>
+	<string name="panel_back">返回</string>
+	
+	<!-- control_panel.xml -> jump_panel -->
+	<string name="gotoPage">GO</string>
+	<string name="num_0">0</string>
+	<string name="num_1">1</string>
+	<string name="num_2">2</string>
+	<string name="num_3">3</string>
+	<string name="num_4">4</string>
+	<string name="num_5">5</string>
+	<string name="num_6">6</string>
+	<string name="num_7">7</string>
+	<string name="num_8">8</string>
+	<string name="num_9">9</string>
+	<string name="num_del">Del</string>
+	<string name="num_clean">Clean</string>
+	<string name="next_chapter">下一章节</string>
+	<string name="list_chapter">章节列表</string>
+	<string name="pre_chapter">上一章节</string>
+
+	<!-- search_dialog_view.xml -> search dialog -->
+	<string name="search">搜索</string>
+	<string name="search_next">下一个结果</string>
+	<string name="search_previous">上一个结果</string>
+	<string name="search_exit">退出</string>
+	<string name="search_loading">正在搜索关键字</string>
+	<string name="search_key_error">请输入搜索关键字</string>
+	<string name="search_value_null">没有搜索到任何结果</string>
+	<string name="search_finished">没有找到上一个或下一个结果</string>
+	
+	<!-- control_panel.xml -> bookmakr dialog -->
+	<string name="bookmark_add_success">添加书签成功</string>
+	<string name="bookmark_del_success">删除书签成功</string>
+	<string name="bookmark_add">正在添加书签</string>
+	<string name="bookmark_del">正在删除书签</string>
+	<string name="bookmark_clean">清空书签列表</string>
+	<string name="bookmark_item_page_format">第%d页</string>
+	<string name="bookmark_menu_goto_bookmark">定位书签</string>
+	<string name="bookmark_menu_del_bookmark">删除书签</string>
+	<string name="bookmark_menu_add_bookmark">添加书签</string>
+
+</resources>

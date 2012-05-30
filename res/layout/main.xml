@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/id_adobe_sample_main" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/white"
+	android:orientation="vertical">
+	<com.foxconn.ebook.reader.ui.view.TitleBarLayout
+		android:id="@+id/id_title_bar" android:layout_width="fill_parent"
+		android:layout_height="40px">
+		<TextView android:id="@+id/id_book_title"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/book_title" android:layout_gravity="left"
+			android:layout_centerVertical="true" android:layout_marginLeft="20px"
+			android:singleLine="true" />
+	</com.foxconn.ebook.reader.ui.view.TitleBarLayout>
+
+	<RelativeLayout android:id="@+id/content_view"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:gravity="center_vertical" android:layout_below="@+id/title_bar">
+		<com.foxconn.ebook.reader.ui.view.RenderView
+			android:id="@+id/id_book_content" android:layout_width="fill_parent"
+			android:layout_height="720px" android:layout_marginLeft="10px"
+			android:layout_marginRight="10px" />
+
+		<!--  
+		<com.foxconn.ebook.reader.ui.view.GestureOverlayLayout
+			android:id="@+id/gesture_layout" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:gravity="center_horizontal"
+			android:layout_below="@+id/title_bar" android:layout_marginTop="500px">
+			<android.gesture.GestureOverlayView
+				android:id="@+id/id_gestures" android:layout_width="fill_parent"
+				android:layout_height="200px" android:layout_weight="1.0"
+				android:gestureStrokeType="multiple" />
+		</com.foxconn.ebook.reader.ui.view.GestureOverlayLayout>
+		-->
+	</RelativeLayout>
+
+	<!-- <com.foxconn.ebook.reader.engine.util.comments.CommentView android:id="@+id/comment_view" 
+		android:layout_width="560dp" android:layout_height="720dp" android:scaleType="fitXY" 
+		android:layout_gravity="center_horizontal" /> -->
+
+	<com.foxconn.ebook.reader.ui.view.BottomBarLayout
+		android:id="@+id/id_bottom_bar" android:layout_width="fill_parent"
+		android:layout_height="40px" android:layout_gravity="bottom"
+		android:layout_below="@+id/content_view">
+
+		<com.foxconn.ebook.reader.ui.view.ProgressDisplayerView
+			android:id="@+id/id_page_progress" android:layout_height="40px"
+			android:layout_width="400px" android:gravity="center_horizontal"
+			android:layout_gravity="center_vertical" android:layout_marginLeft="20px" />
+
+		<TextView android:id="@+id/id_page_info"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:text="@string/default_page" android:gravity="right"
+			android:layout_marginLeft="480px" android:layout_marginTop="5px" />
+	</com.foxconn.ebook.reader.ui.view.BottomBarLayout>
+</LinearLayout>

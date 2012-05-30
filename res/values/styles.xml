@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<resources>
+	<style name="Theme.FloatActivity" parent="android:style/Theme.Dialog">
+		<item name="android:windowBackground">@drawable/float_box</item>
+	</style>
+	<style name="BlackToast" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@android:color/black</item>
+		<item name="android:windowBackground">@null</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	
+	<style name="LightToast" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@android:color/white</item>
+		<item name="android:windowBackground">@null</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	
+	<style name="Transparent" parent="@android:style/Theme.Translucent">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@color/transparent_background</item>
+		<item name="android:windowBackground">@color/transparent_background</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+</resources>

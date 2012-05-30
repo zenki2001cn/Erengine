@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/0.9.0" xmi:id="_hTMuUIKqEeC7MdOfEg41YQ">
+  <modelElement href="ErengineDemo.uml#_bj9TkIKqEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_seHSIIKrEeC7MdOfEg41YQ" sourceAnchor="98.0,0.0" targetAnchor="137.0,37.0" source="_seMxtIKrEeC7MdOfEg41YQ" target="_seMxtIKrEeC7MdOfEg41YQ">
+    <modelElement href="ErengineDemo.uml#_gYJbUYKqEeC7MdOfEg41YQ"/>
+    <nameVisual xmi:id="_seK8gIKrEeC7MdOfEg41YQ" text="">
+      <visualProperties xmi:id="_sjMmcIKrEeC7MdOfEg41YQ" position="2.0,17.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_uPd7AIKrEeC7MdOfEg41YQ" sourceY="-15" targetX="-39" targetY="-52"/>
+    <bendpoints xmi:id="_uPd7AYKrEeC7MdOfEg41YQ" sourceX="135" sourceY="-15" targetX="96" targetY="-52"/>
+    <bendpoints xmi:id="_uPd7AoKrEeC7MdOfEg41YQ" sourceX="135" sourceY="37" targetX="96"/>
+    <stereotypes xmi:id="_seLjkIKrEeC7MdOfEg41YQ" name="Reference">
+      <modelElement href="ErengineDemo.uml#_gYJbU4KqEeC7MdOfEg41YQ"/>
+    </stereotypes>
+    <sourceRole xmi:id="_seK8gYKrEeC7MdOfEg41YQ" name="">
+      <modelElement href="ErengineDemo.uml#_gYJbUoKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_sjL_Y4KrEeC7MdOfEg41YQ" position="81.0,-3.0"/>
+      <visibility xmi:id="_seMxsIKrEeC7MdOfEg41YQ" label="+"/>
+      <cardinality xmi:id="_seMKoIKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_seK8goKrEeC7MdOfEg41YQ" name="mAction" navigable="true">
+      <modelElement href="ErengineDemo.uml#_gSYxkYKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_sjNNgIKrEeC7MdOfEg41YQ" position="11.0,2.0"/>
+      <visibility xmi:id="_seMxsoKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seMxsYKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_seH5MYKrEeC7MdOfEg41YQ" sourceItem="_seH5MIKrEeC7MdOfEg41YQ" targetItem="_seMxtIKrEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_seH5M4KrEeC7MdOfEg41YQ" sourceItem="_seH5MoKrEeC7MdOfEg41YQ" targetItem="_seMxtIKrEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_seP1AIKrEeC7MdOfEg41YQ" sourceAnchor="74.0,0.0" targetAnchor="149.0,37.0" source="_seg6wIKrEeC7MdOfEg41YQ" target="_seg6wIKrEeC7MdOfEg41YQ">
+    <modelElement href="ErengineDemo.uml#_gYKCY4KqEeC7MdOfEg41YQ"/>
+    <nameVisual xmi:id="_sedQYIKrEeC7MdOfEg41YQ" text="">
+      <visualProperties xmi:id="_sjPCsIKrEeC7MdOfEg41YQ" position="-90.0,141.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_uPd7A4KrEeC7MdOfEg41YQ" sourceY="-162" targetX="-75" targetY="-199"/>
+    <bendpoints xmi:id="_uPeiEIKrEeC7MdOfEg41YQ" sourceX="339" sourceY="-162" targetX="264" targetY="-199"/>
+    <bendpoints xmi:id="_uPeiEYKrEeC7MdOfEg41YQ" sourceX="339" sourceY="37" targetX="264"/>
+    <stereotypes xmi:id="_sedQY4KrEeC7MdOfEg41YQ" name="Reference">
+      <modelElement href="ErengineDemo.uml#_gYKpcIKqEeC7MdOfEg41YQ"/>
+    </stereotypes>
+    <sourceRole xmi:id="_sedQYYKrEeC7MdOfEg41YQ" name="">
+      <modelElement href="ErengineDemo.uml#_gYKCZIKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_sjOboIKrEeC7MdOfEg41YQ" position="-15.0,-65.0"/>
+      <visibility xmi:id="_sefsoYKrEeC7MdOfEg41YQ" label="+"/>
+      <cardinality xmi:id="_sefsoIKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_sedQYoKrEeC7MdOfEg41YQ" name="mFbreaderAdapter" navigable="true">
+      <modelElement href="ErengineDemo.uml#_gSdDAoKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_sjPCsYKrEeC7MdOfEg41YQ" position="-74.0,-158.0"/>
+      <visibility xmi:id="_sefso4KrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_sefsooKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_seY-8YKrEeC7MdOfEg41YQ" sourceItem="_seY-8IKrEeC7MdOfEg41YQ" targetItem="_seg6wIKrEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_seZmAYKrEeC7MdOfEg41YQ" sourceItem="_seZmAIKrEeC7MdOfEg41YQ" targetItem="_seg6wIKrEeC7MdOfEg41YQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_seZmAoKrEeC7MdOfEg41YQ" sourceAnchor="68.0,0.0" targetAnchor="74.0,74.0" source="_seMxtIKrEeC7MdOfEg41YQ" target="_seg6wIKrEeC7MdOfEg41YQ">
+    <modelElement href="ErengineDemo.uml#_gYKCYIKqEeC7MdOfEg41YQ"/>
+    <nameVisual xmi:id="_seeegIKrEeC7MdOfEg41YQ" text="">
+      <visualProperties xmi:id="_sjN0kIKrEeC7MdOfEg41YQ" position="2.0,-17.0"/>
+    </nameVisual>
+    <stereotypes xmi:id="_sefFkIKrEeC7MdOfEg41YQ" name="Reference">
+      <modelElement href="ErengineDemo.uml#_gYKCYoKqEeC7MdOfEg41YQ"/>
+    </stereotypes>
+    <sourceRole xmi:id="_seeegYKrEeC7MdOfEg41YQ" name="">
+      <modelElement href="ErengineDemo.uml#_gYKCYYKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_sjNNgYKrEeC7MdOfEg41YQ" position="2.0,-69.0"/>
+      <visibility xmi:id="_segTsoKrEeC7MdOfEg41YQ" label="+"/>
+      <cardinality xmi:id="_segTsYKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_seeegoKrEeC7MdOfEg41YQ" name="mAdapter" navigable="true">
+      <modelElement href="ErengineDemo.uml#_gSZYoIKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_sjN0kYKrEeC7MdOfEg41YQ" position="-76.0,30.0"/>
+      <visibility xmi:id="_segTtIKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_segTs4KrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_seH5MIKrEeC7MdOfEg41YQ" item="_seMxtIKrEeC7MdOfEg41YQ" sourceConnectionVisual="_seH5MYKrEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_gWWrkIKqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_tV4noIKrEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_tV5OsIKrEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_tV5OsYKrEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_seH5MoKrEeC7MdOfEg41YQ" item="_seMxtIKrEeC7MdOfEg41YQ" sourceConnectionVisual="_seH5M4KrEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_sZAIoIKrEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_tV5OsoKrEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_tV5Os4KrEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_tV5OtIKrEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_seMxtIKrEeC7MdOfEg41YQ" comments="_seH5MIKrEeC7MdOfEg41YQ _seH5MoKrEeC7MdOfEg41YQ" targetConnectionVisual="_seH5MYKrEeC7MdOfEg41YQ _seH5M4KrEeC7MdOfEg41YQ" name="FbreaderAction" associationsIn="_seHSIIKrEeC7MdOfEg41YQ" associationsOut="_seHSIIKrEeC7MdOfEg41YQ _seZmAoKrEeC7MdOfEg41YQ">
+    <modelElement href="ErengineDemo.uml#_fr5ZUIKqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_tV5OtYKrEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_tV51wIKrEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_tV51wYKrEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_seOm4IKrEeC7MdOfEg41YQ" position="16.0,452.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_seMxtYKrEeC7MdOfEg41YQ" label="+"/>
+    <attributes xmi:id="_seMxtoKrEeC7MdOfEg41YQ" defaultValue="&quot;FbreaderAction&quot;" name="TAG" staticAttribute="true">
+      <modelElement href="ErengineDemo.uml#_gSYKgIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMxt4KrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSYxkIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMxuIKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seMxuYKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seMxuoKrEeC7MdOfEg41YQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seMxu4KrEeC7MdOfEg41YQ" name="mAction" staticAttribute="true">
+      <modelElement href="ErengineDemo.uml#_gSYxkYKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_seMxvIKrEeC7MdOfEg41YQ" visible="false"/>
+      <stereotypes xmi:id="_seMxvYKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSYxkoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMxs4KrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSYxkoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMxvoKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seMxv4KrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seMxwIKrEeC7MdOfEg41YQ" name="FbreaderAction">
+        <modelElement href="ErengineDemo.uml#_fr5ZUIKqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seMxwYKrEeC7MdOfEg41YQ" name="mAdapter" staticAttribute="true">
+      <modelElement href="ErengineDemo.uml#_gSZYoIKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_sf7QAIKrEeC7MdOfEg41YQ" visible="false"/>
+      <stereotypes xmi:id="_seMxwoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSZYoYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_segTtYKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSZYoYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMxw4KrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seMxxIKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seMxxYKrEeC7MdOfEg41YQ" name="FbreaderAdapter">
+        <modelElement href="ErengineDemo.uml#_fsRz0IKqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seMxxoKrEeC7MdOfEg41YQ" defaultValue="1" name="mTotalNumber">
+      <modelElement href="ErengineDemo.uml#_gSZYooKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMxx4KrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSZ_sIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMxyIKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seMxyYKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seMxyoKrEeC7MdOfEg41YQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seMxy4KrEeC7MdOfEg41YQ" defaultValue="2" name="mCurFontSize">
+      <modelElement href="ErengineDemo.uml#_gSZ_sYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMxzIKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSamwIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMxzYKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seMxzoKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seMxz4KrEeC7MdOfEg41YQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seMx0IKrEeC7MdOfEg41YQ" defaultValue="5" name="MAX_FONT_SIZE">
+      <modelElement href="ErengineDemo.uml#_gSamwYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMx0YKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSamw4KqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMx0oKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seMx04KrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seMx1IKrEeC7MdOfEg41YQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seMx1YKrEeC7MdOfEg41YQ" defaultValue="0" name="MIN_FONT_SIZE">
+      <modelElement href="ErengineDemo.uml#_gSbN0IKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMx1oKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSbN0oKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMx14KrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seMx2IKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seMx2YKrEeC7MdOfEg41YQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_seMx2oKrEeC7MdOfEg41YQ" name="FbreaderAction">
+      <modelElement href="ErengineDemo.uml#_fr71kIKqEeC7MdOfEg41YQ"/>
+      <keywords xmi:id="_seMx24KrEeC7MdOfEg41YQ" keyword="create"/>
+      <visibility xmi:id="_seMx3IKrEeC7MdOfEg41YQ" label="-"/>
+      <outParameters xmi:id="_seMx3YKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fr8coIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMx3oKrEeC7MdOfEg41YQ" name="FbreaderAction">
+          <modelElement href="ErengineDemo.uml#_fr5ZUIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMx34KrEeC7MdOfEg41YQ" name="getInstance" staticOperation="true">
+      <modelElement href="ErengineDemo.uml#_fr8coYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seMx4IKrEeC7MdOfEg41YQ" label="+"/>
+      <outParameters xmi:id="_seMx4YKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gNN9sIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMx4oKrEeC7MdOfEg41YQ" name="FbreaderAction">
+          <modelElement href="ErengineDemo.uml#_fr5ZUIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMx44KrEeC7MdOfEg41YQ" name="free">
+      <modelElement href="ErengineDemo.uml#_fr8cooKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seMx5IKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seMx5YKrEeC7MdOfEg41YQ" name="getCurAdapter">
+      <modelElement href="ErengineDemo.uml#_fr9DsIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMx5oKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fr9DsYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMx54KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fr9qwIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMx6IKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMx6YKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gNOkwIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMx6oKrEeC7MdOfEg41YQ" name="DecAdapter">
+          <modelElement href="ErengineDemo.uml#_fo4hkIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMx64KrEeC7MdOfEg41YQ" name="iCloseBook">
+      <modelElement href="ErengineDemo.uml#_fr-R0YKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMx7IKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fr_f8IKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMx7YKrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsAHAIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMx7oKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seMx74KrEeC7MdOfEg41YQ" name="iLoadBook">
+      <modelElement href="ErengineDemo.uml#_fsAHAoKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMx8IKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsAuEIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMx8YKrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsAuEoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMx8oKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMx84KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsAuEYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMx9IKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMx9YKrEeC7MdOfEg41YQ" name="iLoadChapterInformation">
+      <modelElement href="ErengineDemo.uml#_fsAuFIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMx9oKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsBVIIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMx94KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsBVIYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMx-IKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seMx-YKrEeC7MdOfEg41YQ" name="iChapterJumpByTitle">
+      <modelElement href="ErengineDemo.uml#_fsBVI4KqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMx-oKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsB8MYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMx-4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsCjQIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMx_IKrEeC7MdOfEg41YQ" label="#"/>
+      <parameters xmi:id="_seMx_YKrEeC7MdOfEg41YQ" name="title">
+        <modelElement href="ErengineDemo.uml#_fsB8MIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMx_oKrEeC7MdOfEg41YQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seMx_4KrEeC7MdOfEg41YQ" name="iChapterJumpByIndex">
+      <modelElement href="ErengineDemo.uml#_fsCjQoKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyAIKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsEYcIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyAYKrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsE_gIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyAoKrEeC7MdOfEg41YQ" label="#"/>
+      <parameters xmi:id="_seMyA4KrEeC7MdOfEg41YQ" name="index">
+        <modelElement href="ErengineDemo.uml#_fsCjQ4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyBIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seMyBYKrEeC7MdOfEg41YQ" name="iChapterUp">
+      <modelElement href="ErengineDemo.uml#_fsE_goKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyBoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsFmkIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyB4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsFmkYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyCIKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seMyCYKrEeC7MdOfEg41YQ" name="iChapterDown">
+      <modelElement href="ErengineDemo.uml#_fsGNoIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyCoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsGNoYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyC4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsG0sIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyDIKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seMyDYKrEeC7MdOfEg41YQ" name="iChapterUpdateInfo">
+      <modelElement href="ErengineDemo.uml#_fsG0soKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyDoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsHbwIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyD4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsHbwYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyEIKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seMyEYKrEeC7MdOfEg41YQ" name="iPageUp">
+      <modelElement href="ErengineDemo.uml#_fsHbw4KqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyEoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsIC0IKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyE4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsIp4IKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyFIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMyFYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsIC0YKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyFoKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMyF4KrEeC7MdOfEg41YQ" name="iPageDown">
+      <modelElement href="ErengineDemo.uml#_fsIp4oKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyGIKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsIp44KqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyGYKrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsJQ8YKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyGoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMyG4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsJQ8IKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyHIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMyHYKrEeC7MdOfEg41YQ" name="iPageJumpTo">
+      <modelElement href="ErengineDemo.uml#_fsJ4AIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyHoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsJ4AoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyH4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsKfEIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyIIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMyIYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsJ4A4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyIoKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seMyI4KrEeC7MdOfEg41YQ" name="pageNum">
+        <modelElement href="ErengineDemo.uml#_fsJ4AYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyJIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seMyJYKrEeC7MdOfEg41YQ" name="iPageZoomIn">
+      <modelElement href="ErengineDemo.uml#_fsKfEoKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyJoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsLGIIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyJ4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsLGIoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyKIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMyKYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsLGIYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyKoKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMyK4KrEeC7MdOfEg41YQ" name="iPageZoomOut">
+      <modelElement href="ErengineDemo.uml#_fsLtMYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyLIKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsLtMoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyLYKrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsMUQYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyLoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMyL4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsMUQIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyMIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMyMYKrEeC7MdOfEg41YQ" name="preloadPage">
+      <modelElement href="ErengineDemo.uml#_fsMUQ4KqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyMoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsM7UIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyM4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsM7UYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyNIKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seMyNYKrEeC7MdOfEg41YQ" name="preloadPreviousPage">
+      <modelElement href="ErengineDemo.uml#_fsM7U4KqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyNoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsNiYIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyN4KrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsNiYoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyOIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMyOYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsNiYYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyOoKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMyO4KrEeC7MdOfEg41YQ" name="preloadNextPage">
+      <modelElement href="ErengineDemo.uml#_fsNiZIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seMyPIKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsOJcIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seMyPYKrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsOJcoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seMyPoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seMyP4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsOJcYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyQIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seMyQYKrEeC7MdOfEg41YQ" name="getPrePage">
+      <modelElement href="ErengineDemo.uml#_gNOkwYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seMyQoKrEeC7MdOfEg41YQ" label="-"/>
+      <outParameters xmi:id="_seMyQ4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gNPL0IKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyRIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seMyRYKrEeC7MdOfEg41YQ" name="page">
+        <modelElement href="ErengineDemo.uml#_gNOkwoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyRoKrEeC7MdOfEg41YQ" name="FbreaderPage">
+          <modelElement href="ErengineDemo.uml#_fuxHIIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seMyR4KrEeC7MdOfEg41YQ" name="getNextPage">
+      <modelElement href="ErengineDemo.uml#_gNPL0YKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seMySIKrEeC7MdOfEg41YQ" label="-"/>
+      <outParameters xmi:id="_seMySYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gNPL04KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMySoKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seMyS4KrEeC7MdOfEg41YQ" name="page">
+        <modelElement href="ErengineDemo.uml#_gNPL0oKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seMyTIKrEeC7MdOfEg41YQ" name="FbreaderPage">
+          <modelElement href="ErengineDemo.uml#_fuxHIIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seMyTYKrEeC7MdOfEg41YQ" name="getPage">
+      <modelElement href="ErengineDemo.uml#_gNPy4IKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seNYwIKrEeC7MdOfEg41YQ" label="-"/>
+      <outParameters xmi:id="_seNYwYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gNPy4oKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seNYwoKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seNYw4KrEeC7MdOfEg41YQ" name="page">
+        <modelElement href="ErengineDemo.uml#_gNPy4YKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seNYxIKrEeC7MdOfEg41YQ" name="FbreaderPage">
+          <modelElement href="ErengineDemo.uml#_fuxHIIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seNYxYKrEeC7MdOfEg41YQ" name="updateBookInfo">
+      <modelElement href="ErengineDemo.uml#_gNPy44KqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seNYxoKrEeC7MdOfEg41YQ" label="-"/>
+      <parameters xmi:id="_seNYx4KrEeC7MdOfEg41YQ" name="page">
+        <modelElement href="ErengineDemo.uml#_gNPy5IKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seNYyIKrEeC7MdOfEg41YQ" name="Page">
+          <modelElement href="ErengineDemo.uml#_fu1YkIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_seY-8IKrEeC7MdOfEg41YQ" item="_seg6wIKrEeC7MdOfEg41YQ" sourceConnectionVisual="_seY-8YKrEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_gWXSoIKqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_tV6c0IKrEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_tV6c0YKrEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_tV6c0oKrEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_seZmAIKrEeC7MdOfEg41YQ" item="_seg6wIKrEeC7MdOfEg41YQ" sourceConnectionVisual="_seZmAYKrEeC7MdOfEg41YQ" text="*">
+    <modelElement href="ErengineDemo.uml#_sZAvsIKrEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_tV6c04KrEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_tV6c1IKrEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_tV6c1YKrEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_seg6wIKrEeC7MdOfEg41YQ" comments="_seY-8IKrEeC7MdOfEg41YQ _seZmAIKrEeC7MdOfEg41YQ" targetConnectionVisual="_seY-8YKrEeC7MdOfEg41YQ _seZmAYKrEeC7MdOfEg41YQ" name="FbreaderAdapter" associationsIn="_seP1AIKrEeC7MdOfEg41YQ _seZmAoKrEeC7MdOfEg41YQ" associationsOut="_seP1AIKrEeC7MdOfEg41YQ">
+    <modelElement href="ErengineDemo.uml#_fsRz0IKqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_tV6c1oKrEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_tV7D4IKrEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_tV7D4YKrEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_seklIIKrEeC7MdOfEg41YQ" position="10.0,192.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_seg6wYKrEeC7MdOfEg41YQ" label="+"/>
+    <attributes xmi:id="_seg6woKrEeC7MdOfEg41YQ" defaultValue="&quot;FbreaderAdapter&quot;" name="TAG" staticAttribute="true">
+      <modelElement href="ErengineDemo.uml#_gScb8IKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg6w4KrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSdDAYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg6xIKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg6xYKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg6xoKrEeC7MdOfEg41YQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg6x4KrEeC7MdOfEg41YQ" name="mFbreaderAdapter" staticAttribute="true">
+      <modelElement href="ErengineDemo.uml#_gSdDAoKqEeC7MdOfEg41YQ"/>
+      <visualProperties xmi:id="_seg6yIKrEeC7MdOfEg41YQ" visible="false"/>
+      <stereotypes xmi:id="_seg6yYKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSdqEIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_segTsIKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSdqEIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg6yoKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg6y4KrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg6zIKrEeC7MdOfEg41YQ" name="FbreaderAdapter">
+        <modelElement href="ErengineDemo.uml#_fsRz0IKqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg6zYKrEeC7MdOfEg41YQ" name="mEngineCode" staticAttribute="true">
+      <modelElement href="ErengineDemo.uml#_gSeRIIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg6zoKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSeRIYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg6z4KrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg60IKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg60YKrEeC7MdOfEg41YQ" name="EngineCode">
+        <modelElement href="ErengineDemo.uml#_fpdJUIKqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg60oKrEeC7MdOfEg41YQ" name="mZlfile">
+      <modelElement href="ErengineDemo.uml#_gSeRIoKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg604KrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSe4MIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg61IKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg61YKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg61oKrEeC7MdOfEg41YQ" name="ZLFile">
+        <modelElement href="ErengineDemo.uml#_gPzXpIKqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg614KrEeC7MdOfEg41YQ" name="mZlApplication">
+      <modelElement href="ErengineDemo.uml#_gSe4MYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg62IKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSe4MoKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg62YKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg62oKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg624KrEeC7MdOfEg41YQ" name="FBReaderApp">
+        <modelElement href="ErengineDemo.uml#_gPz-s4KqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg63IKrEeC7MdOfEg41YQ" name="mBitmapManager">
+      <modelElement href="ErengineDemo.uml#_gSffQIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg63YKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSffQYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg63oKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg634KrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg64IKrEeC7MdOfEg41YQ" name="BitmapManager">
+        <modelElement href="ErengineDemo.uml#_gP1M04KqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg64YKrEeC7MdOfEg41YQ" name="mZlSqlConfig">
+      <modelElement href="ErengineDemo.uml#_gSffQoKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg64oKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSgGUIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg644KrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg65IKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg65YKrEeC7MdOfEg41YQ" name="ZLSQLiteConfig">
+        <modelElement href="ErengineDemo.uml#_gP3CAYKqEeC7MdOfEg41YQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg65oKrEeC7MdOfEg41YQ" defaultValue="0" name="mViewWidth">
+      <modelElement href="ErengineDemo.uml#_gSgtYIKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg654KrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gShUcIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg66IKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg66YKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg66oKrEeC7MdOfEg41YQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg664KrEeC7MdOfEg41YQ" defaultValue="0" name="mViewHeight">
+      <modelElement href="ErengineDemo.uml#_gShUcYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg67IKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSh7gIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg67YKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg67oKrEeC7MdOfEg41YQ" label="1" max="1" min="1"/>
+      <type xmi:id="_seg674KrEeC7MdOfEg41YQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg68IKrEeC7MdOfEg41YQ" name="mChapterIndexs">
+      <modelElement href="ErengineDemo.uml#_gSh7gYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg68YKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSiikIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg68oKrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg684KrEeC7MdOfEg41YQ" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_seg69IKrEeC7MdOfEg41YQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_seg69YKrEeC7MdOfEg41YQ" name="mChapterTitles">
+      <modelElement href="ErengineDemo.uml#_gSiikYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg69oKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_gSjJoIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg694KrEeC7MdOfEg41YQ" label="-"/>
+      <cardinality xmi:id="_seg6-IKrEeC7MdOfEg41YQ" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_seg6-YKrEeC7MdOfEg41YQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_seg6-oKrEeC7MdOfEg41YQ" name="getInstance" staticOperation="true">
+      <modelElement href="ErengineDemo.uml#_fsWsUoKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg6-4KrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg6_IKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gNSPIIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg6_YKrEeC7MdOfEg41YQ" name="FbreaderAdapter">
+          <modelElement href="ErengineDemo.uml#_fsRz0IKqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg6_oKrEeC7MdOfEg41YQ" name="FbreaderAdapter">
+      <modelElement href="ErengineDemo.uml#_fsXTYIKqEeC7MdOfEg41YQ"/>
+      <keywords xmi:id="_seg6_4KrEeC7MdOfEg41YQ" keyword="create"/>
+      <visibility xmi:id="_seg7AIKrEeC7MdOfEg41YQ" label="-"/>
+      <outParameters xmi:id="_seg7AYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsX6cIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7AoKrEeC7MdOfEg41YQ" name="FbreaderAdapter">
+          <modelElement href="ErengineDemo.uml#_fsRz0IKqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7A4KrEeC7MdOfEg41YQ" name="cancelProcessing">
+      <modelElement href="ErengineDemo.uml#_fsX6cYKqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg7BIKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsYhgIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seg7BYKrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsYhgYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg7BoKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seg7B4KrEeC7MdOfEg41YQ" name="free">
+      <modelElement href="ErengineDemo.uml#_fsYhg4KqEeC7MdOfEg41YQ"/>
+      <stereotypes xmi:id="_seg7CIKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+        <modelElement href="ErengineDemo.uml#_fsZIkIKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_seg7CYKrEeC7MdOfEg41YQ" name="Annotations">
+        <modelElement href="ErengineDemo.uml#_fsZIkYKqEeC7MdOfEg41YQ"/>
+      </stereotypes>
+      <visibility xmi:id="_seg7CoKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seg7C4KrEeC7MdOfEg41YQ" name="openFile">
+      <modelElement href="ErengineDemo.uml#_fsZIk4KqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7DIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7DYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsZvoIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7DoKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7D4KrEeC7MdOfEg41YQ" name="url">
+        <modelElement href="ErengineDemo.uml#_fsZIlIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7EIKrEeC7MdOfEg41YQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7EYKrEeC7MdOfEg41YQ" name="closeFile">
+      <modelElement href="ErengineDemo.uml#_fsZvoYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7EoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7E4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsZvooKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7FIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7FYKrEeC7MdOfEg41YQ" name="setViewportSize">
+      <modelElement href="ErengineDemo.uml#_fsbk0IKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7FoKrEeC7MdOfEg41YQ" label="#"/>
+      <parameters xmi:id="_seg7F4KrEeC7MdOfEg41YQ" name="w">
+        <modelElement href="ErengineDemo.uml#_fsbk0YKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7GIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_seg7GYKrEeC7MdOfEg41YQ" name="h">
+        <modelElement href="ErengineDemo.uml#_fscL4IKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7GoKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7G4KrEeC7MdOfEg41YQ" name="resetBitmap">
+      <modelElement href="ErengineDemo.uml#_fscL4YKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7HIKrEeC7MdOfEg41YQ" label="#"/>
+    </operations>
+    <operations xmi:id="_seg7HYKrEeC7MdOfEg41YQ" name="getTotalPageIndex">
+      <modelElement href="ErengineDemo.uml#_fscy8IKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7HoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7H4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsdaAIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7IIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7IYKrEeC7MdOfEg41YQ" name="getCurrentPageIndex">
+      <modelElement href="ErengineDemo.uml#_fsdaAYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7IoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7I4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsdaAoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7JIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7JYKrEeC7MdOfEg41YQ" name="zoomIn">
+      <modelElement href="ErengineDemo.uml#_fseBEIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7JoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7J4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fseBEYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7KIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7KYKrEeC7MdOfEg41YQ" name="zoomOut">
+      <modelElement href="ErengineDemo.uml#_fseBEoKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7KoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7K4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fseBE4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7LIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7LYKrEeC7MdOfEg41YQ" name="pageUp">
+      <modelElement href="ErengineDemo.uml#_fseoIIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7LoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7L4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fseoIYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7MIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7MYKrEeC7MdOfEg41YQ" name="pageDown">
+      <modelElement href="ErengineDemo.uml#_fseoIoKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7MoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7M4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fseoI4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7NIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7NYKrEeC7MdOfEg41YQ" name="gotoPage">
+      <modelElement href="ErengineDemo.uml#_fsfPMIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7NoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7N4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsfPMoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7OIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7OYKrEeC7MdOfEg41YQ" name="page">
+        <modelElement href="ErengineDemo.uml#_fsfPMYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7OoKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7O4KrEeC7MdOfEg41YQ" name="gotoPosition">
+      <modelElement href="ErengineDemo.uml#_fsf2QIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7PIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7PYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsf2RIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7PoKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7P4KrEeC7MdOfEg41YQ" name="paragraphIndex">
+        <modelElement href="ErengineDemo.uml#_fsf2QYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7QIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_seg7QYKrEeC7MdOfEg41YQ" name="wordIndex">
+        <modelElement href="ErengineDemo.uml#_fsf2QoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7QoKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_seg7Q4KrEeC7MdOfEg41YQ" name="charIndex">
+        <modelElement href="ErengineDemo.uml#_fsf2Q4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7RIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7RYKrEeC7MdOfEg41YQ" name="nextParagraph">
+      <modelElement href="ErengineDemo.uml#_fsf2RYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7RoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7R4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsgdUIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7SIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7SYKrEeC7MdOfEg41YQ" name="previousParagraph">
+      <modelElement href="ErengineDemo.uml#_fsgdUYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7SoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7S4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsgdUoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7TIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7TYKrEeC7MdOfEg41YQ" name="isBeginParagraph">
+      <modelElement href="ErengineDemo.uml#_fsgdU4KqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7ToKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7T4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fshrcIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7UIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7UYKrEeC7MdOfEg41YQ" name="isEndParagraph">
+      <modelElement href="ErengineDemo.uml#_fshrcYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7UoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7U4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fshrcoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7VIKrEeC7MdOfEg41YQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7VYKrEeC7MdOfEg41YQ" name="getChapterTitles">
+      <modelElement href="ErengineDemo.uml#_fshrc4KqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7VoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7V4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsiSgIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7WIKrEeC7MdOfEg41YQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7WYKrEeC7MdOfEg41YQ" name="getChapterIndexs">
+      <modelElement href="ErengineDemo.uml#_fsiSgoKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7WoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7W4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsiSg4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7XIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7XYKrEeC7MdOfEg41YQ" name="getChapterNumber">
+      <modelElement href="ErengineDemo.uml#_fsi5kIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7XoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7X4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsi5kYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7YIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7YYKrEeC7MdOfEg41YQ" name="goToChapterByTitle">
+      <modelElement href="ErengineDemo.uml#_fsi5koKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7YoKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7Y4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsjgoIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7ZIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7ZYKrEeC7MdOfEg41YQ" name="title">
+        <modelElement href="ErengineDemo.uml#_fsi5k4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7ZoKrEeC7MdOfEg41YQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7Z4KrEeC7MdOfEg41YQ" name="goToChapterByIndex">
+      <modelElement href="ErengineDemo.uml#_fsjgoYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7aIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7aYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsjgo4KqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7aoKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7a4KrEeC7MdOfEg41YQ" name="id">
+        <modelElement href="ErengineDemo.uml#_fsjgooKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7bIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7bYKrEeC7MdOfEg41YQ" name="goToChapterByParagraphIndex">
+      <modelElement href="ErengineDemo.uml#_fskHsIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7boKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7b4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fskHsoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7cIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7cYKrEeC7MdOfEg41YQ" name="paragraphIndex">
+        <modelElement href="ErengineDemo.uml#_fskHsYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7coKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7c4KrEeC7MdOfEg41YQ" name="getCurrentChapterIndex">
+      <modelElement href="ErengineDemo.uml#_fskHs4KqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7dIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7dYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fskuwIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7doKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7d4KrEeC7MdOfEg41YQ" name="getCurrentParagraphIndex">
+      <modelElement href="ErengineDemo.uml#_fskuwYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7eIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7eYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fskuwoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7eoKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_seg7e4KrEeC7MdOfEg41YQ" name="initFbreader">
+      <modelElement href="ErengineDemo.uml#_fskuw4KqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7fIKrEeC7MdOfEg41YQ" label="-"/>
+    </operations>
+    <operations xmi:id="_seg7fYKrEeC7MdOfEg41YQ" name="searchChapter">
+      <modelElement href="ErengineDemo.uml#_fslV0IKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7foKrEeC7MdOfEg41YQ" label="-"/>
+      <outParameters xmi:id="_seg7f4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fslV0oKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7gIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7gYKrEeC7MdOfEg41YQ" name="title">
+        <modelElement href="ErengineDemo.uml#_fslV0YKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7goKrEeC7MdOfEg41YQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7g4KrEeC7MdOfEg41YQ" name="searchChapter">
+      <modelElement href="ErengineDemo.uml#_fsl84IKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7hIKrEeC7MdOfEg41YQ" label="-"/>
+      <outParameters xmi:id="_seg7hYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_fsnLAIKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7hoKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7h4KrEeC7MdOfEg41YQ" name="paragraphIndex">
+        <modelElement href="ErengineDemo.uml#_fsl84YKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7iIKrEeC7MdOfEg41YQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7iYKrEeC7MdOfEg41YQ" name="resetCache">
+      <modelElement href="ErengineDemo.uml#_fsnLAYKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7ioKrEeC7MdOfEg41YQ" label="-"/>
+    </operations>
+    <operations xmi:id="_seg7i4KrEeC7MdOfEg41YQ" name="getBitmap">
+      <modelElement href="ErengineDemo.uml#_gNS2MIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7jIKrEeC7MdOfEg41YQ" label="#"/>
+      <outParameters xmi:id="_seg7jYKrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gP43MYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7joKrEeC7MdOfEg41YQ" name="Bitmap">
+          <modelElement href="ErengineDemo.uml#_gP4QIIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7j4KrEeC7MdOfEg41YQ" name="pageType">
+        <modelElement href="ErengineDemo.uml#_gNS2MYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7kIKrEeC7MdOfEg41YQ" name="PageType">
+          <modelElement href="ErengineDemo.uml#_fsVeMIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_seg7kYKrEeC7MdOfEg41YQ" name="createApplication">
+      <modelElement href="ErengineDemo.uml#_gP5eQIKqEeC7MdOfEg41YQ"/>
+      <visibility xmi:id="_seg7koKrEeC7MdOfEg41YQ" label="-"/>
+      <outParameters xmi:id="_seg7k4KrEeC7MdOfEg41YQ">
+        <modelElement href="ErengineDemo.uml#_gP5eQoKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7lIKrEeC7MdOfEg41YQ" name="FBReaderApp">
+          <modelElement href="ErengineDemo.uml#_gPz-s4KqEeC7MdOfEg41YQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_seg7lYKrEeC7MdOfEg41YQ" name="file">
+        <modelElement href="ErengineDemo.uml#_gP5eQYKqEeC7MdOfEg41YQ"/>
+        <type xmi:id="_seg7loKrEeC7MdOfEg41YQ" name="ZLFile">
+          <modelElement href="ErengineDemo.uml#_gPzXpIKqEeC7MdOfEg41YQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:EnumerationVisual" xmi:id="_selMMIKrEeC7MdOfEg41YQ" name="PageType">
+    <modelElement href="ErengineDemo.uml#_fsVeMIKqEeC7MdOfEg41YQ"/>
+    <visualAttributeProperties xmi:id="_tV7q8IKrEeC7MdOfEg41YQ" collapsed="true" attributeName="literalsCompartment"/>
+    <visualAttributeProperties xmi:id="_tV7q8YKrEeC7MdOfEg41YQ" collapsed="true" attributeName="attributeCompartment"/>
+    <visualAttributeProperties xmi:id="_tV7q8oKrEeC7MdOfEg41YQ" collapsed="true" attributeName="methodCompartment"/>
+    <visualProperties xmi:id="_sexZcIKrEeC7MdOfEg41YQ" position="234.0,45.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_selMMYKrEeC7MdOfEg41YQ" name="LegacyStyledElement">
+      <modelElement href="ErengineDemo.uml#_fsWFQIKqEeC7MdOfEg41YQ"/>
+    </stereotypes>
+    <visibility xmi:id="_selMMoKrEeC7MdOfEg41YQ" label="#"/>
+    <literals xmi:id="_selMM4KrEeC7MdOfEg41YQ" name="PreviousPage">
+      <modelElement href="ErengineDemo.uml#_fsWFQYKqEeC7MdOfEg41YQ"/>
+    </literals>
+    <literals xmi:id="_selMNIKrEeC7MdOfEg41YQ" name="CurrentPage">
+      <modelElement href="ErengineDemo.uml#_fsWsUIKqEeC7MdOfEg41YQ"/>
+    </literals>
+    <literals xmi:id="_selMNYKrEeC7MdOfEg41YQ" name="NextPage">
+      <modelElement href="ErengineDemo.uml#_fsWsUYKqEeC7MdOfEg41YQ"/>
+    </literals>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Basic text appearance -->
+	<style name="TextAppearance.Base.Large" parent="@android:style/TextAppearance.Large">
+		<item name="android:textSize">@dimen/baseTextSizeLarge</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="TextAppearance.Base.Medium" parent="@android:style/TextAppearance.Medium">
+		<item name="android:textSize">@dimen/baseTextSizeMedium</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="TextAppearance.Base.Small" parent="@android:style/TextAppearance.Small">
+		<item name="android:textSize">@dimen/baseTextSizeSmall</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="TextAppearance.Base.MainTitle" parent="@android:style/TextAppearance.Large">
+		<item name="android:textSize">@dimen/baseMainTitleTextSize</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="TextAppearance.Base.SubTitle" parent="@android:style/TextAppearance.Medium">
+		<item name="android:textSize">@dimen/baseSubTitleTextSize</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="TextAppearance.Base.ListItemTitle" parent="@android:style/TextAppearance.Large">
+		<item name="android:textSize">@dimen/baseListItemTitleTextSize</item>
+	</style>
+	<style name="TextAppearance.Base.ListItemSummary" parent="@android:style/TextAppearance.Large">
+		<item name="android:textSize">@dimen/baseListItemSummaryTextSize</item>
+	</style>
+
+	<style name="Em1.Button.Base" parent="@android:style/Widget.Button">
+		<item name="android:layout_width">@dimen/baseCommandButtonHeight</item>
+		<item name="android:background">@drawable/base_btn_command_selector</item>
+		<item name="android:textAppearance">@style/TextAppearance.Base.Small</item>
+	</style>
+
+	<style name="MainMenuButton" parent="Em1.Button.Base">
+		<item name="android:layout_width">@dimen/baseMainMenuButtonWidth</item>
+		<item name="android:layout_height">@dimen/baseMainMenuButtonHeight</item>
+		<item name="android:textSize">@dimen/baseMainMenuTextSize</item>
+		<item name="android:focusable">false</item>
+	</style>
+
+	<style name="PageNumberButton" parent="Em1.Button.Base">
+		<item name="android:layout_width">0dip</item>
+		<item name="android:layout_height">40dip</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textAppearance">@style/TextAppearance.Base.Small</item>
+		<item name="android:background">@drawable/digit_btn_selector</item>
+	</style>
+
+	<style name="PageControl">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:background">@drawable/base_page_control_selector</item>
+	</style>
+</resources>

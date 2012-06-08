@@ -8,23 +8,23 @@ import com.foxconn.ebook.reader.engine.util.EngineConfig;
 import com.foxconn.ebook.reader.engine.util.Logger;
 
 public final class LineBreaker {
-	static private final String TAG = "LineBreaker";
+	static private final String TAG = "LineBreaker-v2";
 	// modify by zenki-zha-xxx
 	static {
 		IEngineService ies = (IEngineService) ERManager
 				.getService(ERManager.ERENGINE_SERVICE);
 
 		String libPath = ies.getConfig().getLibraryPath();
-		String soPath = libPath + File.separator + "libLineBreak.so";
+		String soPath = libPath + File.separator + "libLineBreak-v2.so";
 
 		try {
 			if (libPath.equals(EngineConfig.DEFAULT_LIBRARY_LOCAL)) {
-				System.loadLibrary("LineBreak");
+				System.loadLibrary("LineBreak-v2");
 			} else {
 				System.load(soPath);
 			}
 		} catch (Exception e) {
-			Logger.eLog("EREngine", "load libLineBreak.so = " + e.getMessage());
+			Logger.eLog("EREngine", "load libLineBreak-v2.so = " + e.getMessage());
 		}
 
 		init();
@@ -36,12 +36,8 @@ public final class LineBreaker {
 	public static final char INSIDEACHAR = 3;
 
 	private static native void init();
-
-	private static native void setLineBreaksForCharArray(char[] data,
-			int offset, int length, String lang, byte[] breaks);
-
-	private static native void setLineBreaksForString(String data, String lang,
-			byte[] breaks);
+	private static native void setLineBreaksForCharArray(char[] data, int offset, int length, String lang, byte[] breaks);
+	private static native void setLineBreaksForString(String data, String lang, byte[] breaks);
 
 	private final String myLanguage;
 

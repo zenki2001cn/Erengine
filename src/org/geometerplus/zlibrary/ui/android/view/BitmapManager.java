@@ -81,7 +81,13 @@ public class BitmapManager {
 
 		myIndexes[iIndex] = index;
 		if (myBitmaps[iIndex] == null) {
-			myBitmaps[iIndex] = Bitmap.createBitmap(myWidth, myHeight, mBitmapConfig);
+			try {
+				myBitmaps[iIndex] = Bitmap.createBitmap(myWidth, myHeight, mBitmapConfig);
+			} catch (OutOfMemoryError e) {
+				System.gc();
+				System.gc();
+				myBitmaps[iIndex] = Bitmap.createBitmap(myWidth, myHeight, mBitmapConfig);
+			}
 		}
 
 		// Log.e(TAG, "debug 3 getBitmap index == " + index);
@@ -92,7 +98,7 @@ public class BitmapManager {
 		// del by zenki-zha-xxx
 		// final ZLView view = ZLApplication.Instance().getCurrentView();
 		// view.onScrollingFinished(index);
-
+		
 		return myBitmaps[iIndex];
 	}
 

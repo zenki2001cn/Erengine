@@ -20,8 +20,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
 
-import com.foxconn.ebook.EPD_Library;
-import com.foxconn.ebook.EPDScreenApi;
+//import com.foxconn.ebook.EPD_Library;
+//import com.foxconn.ebook.EPDScreenApi;
 import com.foxconn.ebook.reader.engine.util.Logger;
 
 /**
@@ -38,7 +38,7 @@ public class CommentEngineEPD extends BaseCommentEngine{
 	private int DRAW_START_X = 0;
 	private int DRAW_START_Y = 0;
 
-	private EPDScreenApi epdScreen;
+//	private EPDScreenApi epdScreen;
 
 	protected CommentEngineEPD(View context, Rect rect) {
 		super(context, rect);
@@ -49,7 +49,7 @@ public class CommentEngineEPD extends BaseCommentEngine{
 	protected void init() {
 		super.init();
 
-		epdScreen = new EPDScreenApi();
+//		epdScreen = new EPDScreenApi();
 	}
 
 	protected void free() {
@@ -67,16 +67,16 @@ public class CommentEngineEPD extends BaseCommentEngine{
 		Logger.dLog(TAG, "initEPD");
 
 		getEpdRect();
-		EPD_Library.epd_handwrite_update(1, 2, DRAW_START_X, DRAW_START_Y, DRAW_END_X, DRAW_END_Y);
-		epdScreen.LockScreenUpdateMode(1, 20, 1, DRAW_START_X, DRAW_START_Y, DRAW_END_X, DRAW_END_Y, 1);
+//		EPD_Library.epd_handwrite_update(1, 2, DRAW_START_X, DRAW_START_Y, DRAW_END_X, DRAW_END_Y);
+//		epdScreen.LockScreenUpdateMode(1, 20, 1, DRAW_START_X, DRAW_START_Y, DRAW_END_X, DRAW_END_Y, 1);
 	}
 
 	private void freeEPD() {
 		Logger.dLog(TAG, "freeEPD");
 		
 		getEpdRect();
-		EPD_Library.epd_handwrite_update(0, 2, DRAW_START_X, DRAW_START_Y, DRAW_END_X, DRAW_END_Y);
-		epdScreen.LockScreenUpdateMode(0, 20, 1, DRAW_START_X, DRAW_START_Y, DRAW_END_X, DRAW_END_Y, 1);
+//		EPD_Library.epd_handwrite_update(0, 2, DRAW_START_X, DRAW_START_Y, DRAW_END_X, DRAW_END_Y);
+//		epdScreen.LockScreenUpdateMode(0, 20, 1, DRAW_START_X, DRAW_START_Y, DRAW_END_X, DRAW_END_Y, 1);
 	}
 
 	protected void enterComment() {
@@ -176,18 +176,19 @@ public class CommentEngineEPD extends BaseCommentEngine{
 		Logger.iLog(TAG, "xxxx set_draw_pic2_epd");
 		
 		getEpdRect();
-		EPD_Library.epd_fill_2buffer(1, DRAW_START_X, DRAW_START_Y, DRAW_END_X,
-				DRAW_END_Y, bmp, 1, 1, 0, 0);
+//		EPD_Library.epd_fill_2buffer(1, DRAW_START_X, DRAW_START_Y, DRAW_END_X,
+//				DRAW_END_Y, bmp, 1, 1, 0, 0);
 	}
 
 	private Bitmap getDrawing4Epd() {
 		Logger.iLog(TAG, "xxxx getDrawing4Epd");
 		
 		getEpdRect();
-		Bitmap bitmap = EPD_Library.epd_handwrite_get(1, DRAW_START_X, DRAW_START_Y,
-				DRAW_END_X, DRAW_END_Y, 0);
-
-		return setAlpha(bitmap, 0);
+//		Bitmap bitmap = EPD_Library.epd_handwrite_get(1, DRAW_START_X, DRAW_START_Y,
+//				DRAW_END_X, DRAW_END_Y, 0);
+//
+//		return setAlpha(bitmap, 0);
+		return null;
 	}
 
 	private Bitmap setAlpha(Bitmap sourceImg, int number) {

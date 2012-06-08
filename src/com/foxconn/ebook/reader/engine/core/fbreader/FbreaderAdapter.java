@@ -1185,7 +1185,8 @@ public class FbreaderAdapter extends DecAdapter {
 		int storedWordCounter = 0;
 		boolean lineIsNonEmpty = false;
 		boolean appendLineBreak = false;
-		mainLoop: while (wordCounter < maxWords && sentenceCounter < 3) {
+mainLoop: 
+		while (wordCounter < maxWords && sentenceCounter < 3) {
 			while (cursor.isEndOfParagraph()) {
 				if (!cursor.nextParagraph()) {
 					break mainLoop;
@@ -1213,6 +1214,11 @@ public class FbreaderAdapter extends DecAdapter {
 				}
 			}
 			final ZLTextElement element = cursor.getElement();
+			// add zenki-zha-xxx, some books may crash
+			if (element == null) {
+				break mainLoop;
+			}
+			
 			if (element instanceof ZLTextWord) {
 				final ZLTextWord word = (ZLTextWord) element;
 				if (lineIsNonEmpty) {

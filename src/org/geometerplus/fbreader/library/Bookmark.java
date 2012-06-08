@@ -202,6 +202,11 @@ mainLoop:
 				}
 			}
 			final ZLTextElement element = cursor.getElement();
+			// add zenki-zha-xxx, some books may crash
+			if (element == null) {
+				continue;
+			}
+			
 			if (element instanceof ZLTextWord) {
 				final ZLTextWord word = (ZLTextWord)element;
 				if (lineIsNonEmpty) {

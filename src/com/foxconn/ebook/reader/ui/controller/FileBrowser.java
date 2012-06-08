@@ -43,6 +43,7 @@ import com.foxconn.ebook.reader.engine.util.Logger;
 public class FileBrowser extends Activity {
 	static private final String TAG = "FileBrowser";
 	private ListView mFileListView;
+//	static private final String EXTERNAL_PATH = "/sdcard/external_sd/books";
 	static private final String EXTERNAL_PATH = "/sdcard/books";
 	private IDatabaseService mIds;
 

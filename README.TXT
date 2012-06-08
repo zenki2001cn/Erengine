@@ -1,3 +1,19 @@
+0.5.7
+1. 判断空指针，解决打开部分epub会crash的问题。
+2. 更新FBReader 1.5.5的libDeflatingDecompressor-v3.so、libLineBreak-v2.so、libNativeFormats-v2.so。
+3. 删除EK1的EPD刷新库。
+
+0.5.6
+1. 修復數據庫部分BUG.
+2. 添加數據庫的若幹接口.
+3. 修改獲取Message部分代碼.
+4. 添加獲取當前頁Summary方法.
+
+0.5.5
+1. FBReader內核更新至1.1.9.
+2. 修復數據庫接口的若幹問題.
+3. 添加SDCARD文件瀏覽界面.
+
 0.5.4
 1. 优化FBReader的遍历列表的处理方式.
 2. 修正部分EPUB书段落第一行有多余空格导致显示的问题.

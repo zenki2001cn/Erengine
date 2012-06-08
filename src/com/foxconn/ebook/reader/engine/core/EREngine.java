@@ -3,11 +3,16 @@
  *
  * @revision:  0.5 
  *
- * @version    0.5.6
+ * @version    0.5.7
  * @author:    Zenki (zhajun), zenki2001cn@163.com
  * @date:      2011-06-05 下午05:29:59
  * 
  * @history:
+ * 				0.5.7
+ * 				1. 判断空指针，解决打开部分epub会crash的问题。
+ * 				2. 更新FBReader 1.5.5的libDeflatingDecompressor-v3.so、libLineBreak-v2.so、libNativeFormats-v2.so。
+ * 				3. 删除EK1的EPD刷新库。
+ * 
  * 				0.5.6
  * 				1. 修復數據庫部分BUG.
  * 				2. 添加數據庫的若幹接口.

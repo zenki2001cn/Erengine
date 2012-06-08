@@ -7,7 +7,6 @@
 	<classpathentry kind="lib" path="libs/cpdetector/ext/chardet-1.0.jar"/>
 	<classpathentry kind="lib" path="libs/cpdetector/ext/jargs-1.0.jar"/>
 	<classpathentry kind="lib" path="libs/cpdetector/cpdetector_1.0.8.jar"/>
-	<classpathentry kind="lib" path="libs/ek1epd/com.foxconn.ebook.EPD_Library_V2.1.jar"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

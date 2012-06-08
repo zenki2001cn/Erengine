@@ -87,7 +87,8 @@ public final class ZLTextWordCursor extends ZLTextPosition {
 	}
 
 	public ZLTextElement getElement() {
-		return myParagraphCursor.getElement(myElementIndex);
+		// add zenki-zha-xxx, some books may crash
+		return !isNull() ? myParagraphCursor.getElement(myElementIndex) : null;
 	}
 
 	public ZLTextParagraphCursor getParagraphCursor() {

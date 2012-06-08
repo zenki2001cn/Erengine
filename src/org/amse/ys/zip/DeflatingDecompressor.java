@@ -8,7 +8,7 @@ import com.foxconn.ebook.reader.engine.util.EngineConfig;
 import com.foxconn.ebook.reader.engine.util.Logger;
 
 class DeflatingDecompressor extends Decompressor {
-	static private final String TAG = "DeflatingDecompressor";
+	static private final String TAG = "DeflatingDecompressor-v3";
 
 	// modify by zenki-zha-xxx
 	static {
@@ -17,17 +17,17 @@ class DeflatingDecompressor extends Decompressor {
 
 		String libPath = ies.getConfig().getLibraryPath();
 		String soPath = libPath + File.separator
-				+ "libDeflatingDecompressor.so";
+				+ "libDeflatingDecompressor-v3.so";
 
 		try {
 			if (libPath.equals(EngineConfig.DEFAULT_LIBRARY_LOCAL)) {
-				System.loadLibrary("DeflatingDecompressor");
+				System.loadLibrary("DeflatingDecompressor-v3");
 			} else {
 				System.load(soPath);
 			}
 		} catch (Exception e) {
 			Logger.eLog("EREngine",
-					"load libDeflatingDecompressor.so = " + e.getMessage());
+					"load libDeflatingDecompressor-v3.so = " + e.getMessage());
 		}
 	}
 
@@ -46,19 +46,17 @@ class DeflatingDecompressor extends Decompressor {
 	private int myOutBufferOffset;
 	private int myOutBufferLength;
 
-	private boolean myInflatingInProgress;
+	private volatile int myInflatorId = -1;
 
-	public DeflatingDecompressor(MyBufferedInputStream inputStream,
-			LocalFileHeader header) throws IOException {
+	public DeflatingDecompressor(MyBufferedInputStream inputStream, LocalFileHeader header) throws IOException {
 		super();
 		reset(inputStream, header);
 	}
 
-	void reset(MyBufferedInputStream inputStream, LocalFileHeader header)
-			throws IOException {
-		if (myInflatingInProgress) {
-			endInflating();
-			myInflatingInProgress = false;
+	void reset(MyBufferedInputStream inputStream, LocalFileHeader header) throws IOException {
+		if (myInflatorId != -1) {
+			endInflating(myInflatorId);
+			myInflatorId = -1;
 		}
 
 		myStream = inputStream;
@@ -76,8 +74,10 @@ class DeflatingDecompressor extends Decompressor {
 		myOutBufferOffset = OUT_BUFFER_SIZE;
 		myOutBufferLength = 0;
 
-		startInflating();
-		myInflatingInProgress = true;
+		myInflatorId = startInflating();
+		if (myInflatorId == -1) {
+			throw new ZipException("cannot start inflating");
+		}
 	}
 
 	@Override
@@ -98,15 +98,10 @@ class DeflatingDecompressor extends Decompressor {
 				fillOutBuffer();
 			}
 			if (myOutBufferLength == 0) {
-				if (myInflatingInProgress) {
-					throw new IOException("cannot read from zip");
-				} else {
 					len -= toFill;
 					break;
 				}
-			}
-			final int ready = (toFill < myOutBufferLength) ? toFill
-					: myOutBufferLength;
+			final int ready = (toFill < myOutBufferLength) ? toFill : myOutBufferLength;
 			if (b != null) {
 				System.arraycopy(myOutBuffer, myOutBufferOffset, b, off, ready);
 			}
@@ -132,12 +127,8 @@ class DeflatingDecompressor extends Decompressor {
 			fillOutBuffer();
 		}
 		if (myOutBufferLength == 0) {
-			if (myInflatingInProgress) {
-				throw new IOException("cannot read from zip");
-			} else {
 				myAvailable = 0;
 				return -1;
-			}
 		}
 		--myAvailable;
 		--myOutBufferLength;
@@ -145,15 +136,14 @@ class DeflatingDecompressor extends Decompressor {
 	}
 
 	private void fillOutBuffer() throws IOException {
-		if (!myInflatingInProgress) {
+		if (myInflatorId == -1) {
 			return;
 		}
 
 		while (myOutBufferLength == 0) {
 			if (myInBufferLength == 0) {
 				myInBufferOffset = 0;
-				final int toRead = (myCompressedAvailable < IN_BUFFER_SIZE) ? myCompressedAvailable
-						: IN_BUFFER_SIZE;
+				final int toRead = (myCompressedAvailable < IN_BUFFER_SIZE) ? myCompressedAvailable : IN_BUFFER_SIZE;
 				myInBufferLength = myStream.read(myInBuffer, 0, toRead);
 				if (myInBufferLength < toRead) {
 					myCompressedAvailable = 0;
@@ -161,34 +151,40 @@ class DeflatingDecompressor extends Decompressor {
 					myCompressedAvailable -= toRead;
 				}
 			}
-			if (myInBufferLength == 0) {
+			if (myInBufferLength <= 0) {
 				break;
 			}
-			final long result = inflate(myInBuffer, myInBufferOffset,
-					myInBufferLength, myOutBuffer);
+			final long result = inflate(myInflatorId, myInBuffer, myInBufferOffset, myInBufferLength, myOutBuffer);
 			if (result <= 0) {
-				throw new IOException(
-						"Cannot inflate zip-compressed block, code = " + result);
+				final StringBuffer extraInfo = new StringBuffer()
+					.append(myStream.offset()).append(":")
+					.append(myInBufferOffset).append(":")
+					.append(myInBufferLength).append(":")
+					.append(myOutBuffer.length).append(":");
+				for (int i = 0; i < Math.min(10, myInBufferLength); ++i) {
+					extraInfo.append(myInBuffer[myInBufferOffset + i]).append(",");
+				}
+				throw new ZipException("Cannot inflate zip-compressed block, code = " + result + ";extra info = " + extraInfo);
 			}
 			final int in = (int) (result >> 16) & 0xFFFF;
+			if (in > myInBufferLength) {
+				throw new ZipException("Invalid inflating result, code = " + result + "; buffer length = " + myInBufferLength);
+			}
 			final int out = (int) result & 0xFFFF;
 			myInBufferOffset += in;
 			myInBufferLength -= in;
 			myOutBufferOffset = 0;
 			myOutBufferLength = out;
 			if ((result & (1L << 32)) != 0) {
-				endInflating();
-				myInflatingInProgress = false;
+				endInflating(myInflatorId);
+				myInflatorId = -1;
 				myStream.backSkip(myInBufferLength);
 				break;
 			}
 		}
 	}
 
-	private native boolean startInflating();
-
-	private native void endInflating();
-
-	private native long inflate(byte[] in, int inOffset, int inLength,
-			byte[] out);
+	private native int startInflating();
+	private native void endInflating(int inflatorId);
+	private native long inflate(int inflatorId, byte[] in, int inOffset, int inLength, byte[] out);
 }

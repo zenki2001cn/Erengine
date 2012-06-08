@@ -10,6 +10,11 @@ A book reader engine
 ChangeLog
 ==========
 
+0.5.7
+1. 判断空指针，解决打开部分epub会crash的问题。
+2. 更新FBReader 1.5.5的libDeflatingDecompressor-v3.so、libLineBreak-v2.so、libNativeFormats-v2.so。
+3. 删除EK1的EPD刷新库。
+
 0.5.6
 -----
 1. 修復數據庫部分BUG.

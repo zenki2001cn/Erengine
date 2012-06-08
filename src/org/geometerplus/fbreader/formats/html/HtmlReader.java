@@ -33,7 +33,7 @@ import org.geometerplus.zlibrary.text.model.ZLTextParagraph;
 import org.geometerplus.zlibrary.core.xml.ZLXMLProcessor;
 import org.geometerplus.fbreader.formats.xhtml.XHTMLReader;
 
-import com.foxconn.ebook.reader.engine.util.Logger;
+import com.easyview.ebook.reader.engine.util.Logger;
 
 import android.util.Log;
 

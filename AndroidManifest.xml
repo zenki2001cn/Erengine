@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- android:theme="@style/Theme.FloatActivity" -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	android:versionCode="057" android:versionName="0.5.7"
-	package="com.foxconn.ebook.reader.easyviewer">
+	android:versionCode="058" android:versionName="0.5.8"
+	package="com.easyview.ebook.reader.easyviewer">
 	<supports-screens android:smallScreens="true"
 		android:normalScreens="true" android:largeScreens="true"
 		android:anyDensity="true" />
 	<application android:name=".EasyViewerApplication"
 		android:icon="@drawable/icon" android:label="@string/app_name">
-		<activity android:name="com.foxconn.ebook.reader.ui.controller.EasyViewer"
+		<activity android:name="com.easyview.ebook.reader.ui.controller.EasyViewer"
 			android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 			android:process=":easyviewer" >
 		</activity>
 
-		<activity android:name="com.foxconn.ebook.reader.ui.controller.FileBrowser"
+		<activity android:name="com.easyview.ebook.reader.ui.controller.FileBrowser"
 			android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 			>
 			<intent-filter>
@@ -24,8 +24,8 @@
 			</intent-filter>
 		</activity>
 
-		<provider android:authorities="com.foxconn.ebook.reader.engine.util.provider"
-			android:name="com.foxconn.ebook.reader.engine.util.provider.ERSqliteProvider">
+		<provider android:authorities="com.easyview.ebook.reader.engine.util.provider"
+			android:name="com.easyview.ebook.reader.engine.util.provider.ERSqliteProvider">
 		</provider>
 	</application>
 	<uses-sdk android:minSdkVersion="5" />

@@ -32,8 +32,8 @@ import org.geometerplus.zlibrary.core.library.ZLibrary;
 import org.geometerplus.zlibrary.core.filesystem.ZLFile;
 import org.geometerplus.zlibrary.core.filesystem.ZLResourceFile;
 
-import com.foxconn.ebook.reader.engine.core.ERManager;
-import com.foxconn.ebook.reader.engine.core.IEngineService;
+import com.easyview.ebook.reader.engine.core.ERManager;
+import com.easyview.ebook.reader.engine.core.IEngineService;
 
 // del by zenki-zha-xxx
 //import org.geometerplus.zlibrary.ui.android.R;

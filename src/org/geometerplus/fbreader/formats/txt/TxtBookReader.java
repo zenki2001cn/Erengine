@@ -15,7 +15,7 @@ import org.geometerplus.fbreader.bookmodel.BookReader;
 import org.geometerplus.fbreader.bookmodel.FBTextKind;
 import org.geometerplus.zlibrary.text.model.ZLTextParagraph;
 
-import com.foxconn.ebook.reader.engine.util.Logger;
+import com.easyview.ebook.reader.engine.util.Logger;
 
 public class TxtBookReader extends TxtReader {
 	static private final String TAG = "TxtBookReader";

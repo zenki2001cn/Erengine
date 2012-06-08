@@ -23,7 +23,7 @@ import org.geometerplus.zlibrary.core.util.*;
 
 import org.geometerplus.zlibrary.core.image.ZLImageMap;
 
-import com.foxconn.ebook.reader.engine.util.Logger;
+import com.easyview.ebook.reader.engine.util.Logger;
 
 public final class ZLTextWritablePlainModel extends ZLTextPlainModel implements ZLTextWritableModel {
 	static private final String TAG = "ZLTextWritablePlainModel";

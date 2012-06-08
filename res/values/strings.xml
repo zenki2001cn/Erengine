@@ -2,11 +2,11 @@
 <resources>
 
 	<!-- main.xml -->
-	<string name="app_name">EasyViewer</string>
+	<string name="app_name">EasyView</string>
 	<string name="alert_illegal_page">页码无效</string>
 	<string name="sure">确定</string>
 	<string name="ask_alert_illegal_page">输入页码无效，请确认!</string>
-	<string name="loading">装载书籍中</string>
+	<string name="loading">Loading...</string>
 	<string name="password">请输入密码</string>
 	<string name="default_page">页码</string>
 	<string name="book_title">书名</string>

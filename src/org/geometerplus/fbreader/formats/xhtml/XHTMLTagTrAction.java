@@ -12,7 +12,7 @@ package org.geometerplus.fbreader.formats.xhtml;
 
 import org.geometerplus.zlibrary.core.xml.ZLStringMap;
 
-import com.foxconn.ebook.reader.engine.util.Logger;
+import com.easyview.ebook.reader.engine.util.Logger;
 
 public class XHTMLTagTrAction extends XHTMLTagAction {
 	static private final String TAG = "XHTMLTagTrAction";

@@ -30,8 +30,8 @@ import org.geometerplus.fbreader.library.Book;
 import org.geometerplus.zlibrary.core.filesystem.ZLFile;
 import org.geometerplus.zlibrary.core.image.ZLImage;
 
-import com.foxconn.ebook.reader.engine.util.Logger;
-import com.foxconn.ebook.reader.engine.util.charsetcodec.CharsetDetectorProxy;
+import com.easyview.ebook.reader.engine.util.Logger;
+import com.easyview.ebook.reader.engine.util.charsetcodec.CharsetDetectorProxy;
 
 public abstract class FormatPlugin {
 	static private final String TAG = "FormatPlugin";

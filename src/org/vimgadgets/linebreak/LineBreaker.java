@@ -2,10 +2,10 @@ package org.vimgadgets.linebreak;
 
 import java.io.File;
 
-import com.foxconn.ebook.reader.engine.core.ERManager;
-import com.foxconn.ebook.reader.engine.core.IEngineService;
-import com.foxconn.ebook.reader.engine.util.EngineConfig;
-import com.foxconn.ebook.reader.engine.util.Logger;
+import com.easyview.ebook.reader.engine.core.ERManager;
+import com.easyview.ebook.reader.engine.core.IEngineService;
+import com.easyview.ebook.reader.engine.util.EngineConfig;
+import com.easyview.ebook.reader.engine.util.Logger;
 
 public final class LineBreaker {
 	static private final String TAG = "LineBreaker-v2";

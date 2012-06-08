@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="wrap_content" android:layout_height="wrap_content">
 
-	<com.foxconn.ebook.reader.ui.view.ControlPanelLayout
+	<com.easyview.ebook.reader.ui.view.ControlPanelLayout
 		android:id="@+id/id_panel_wrapper" android:layout_width="400px"
 		android:layout_height="400px" android:orientation="vertical">
 
@@ -33,7 +33,7 @@
 		</RelativeLayout>
 
 		<!-- 跳頁栏 -->
-		<com.foxconn.ebook.reader.ui.view.JumpWapperPanelLayout
+		<com.easyview.ebook.reader.ui.view.JumpWapperPanelLayout
 			android:tag="@string/col_jump" android:id="@+id/id_jump_wrapper"
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
 			android:visibility="invisible" android:layout_marginLeft="35px">
@@ -101,10 +101,10 @@
 					android:layout_toRightOf="@+id/id_jump_chapter_list"
 					android:layout_width="105px" android:layout_height="50px" />
 			</RelativeLayout>
-		</com.foxconn.ebook.reader.ui.view.JumpWapperPanelLayout>
+		</com.easyview.ebook.reader.ui.view.JumpWapperPanelLayout>
 
 		<!-- 书签栏 -->
-		<com.foxconn.ebook.reader.ui.view.BookmarkPanelLayout
+		<com.easyview.ebook.reader.ui.view.BookmarkPanelLayout
 			android:id="@+id/id_bookmark_wrapper" 
 			android:tag="@string/col_bookmark" android:layout_marginTop="40px"
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
 			<Button android:id="@+id/id_bookmark_clean" android:text="@string/bookmark_clean"
 				android:layout_below="@+id/id_bookmark_list" android:layout_toRightOf="@+id/id_bookmark_add"
 				android:layout_width="150px" android:layout_height="50px" />
-		</com.foxconn.ebook.reader.ui.view.BookmarkPanelLayout>
+		</com.easyview.ebook.reader.ui.view.BookmarkPanelLayout>
 
 		<!-- 總控制台 -->
 		<RelativeLayout android:id="@+id/id_control_panel_wrapper"
@@ -170,5 +170,5 @@
 			</TableLayout>
 		</RelativeLayout>
 
-	</com.foxconn.ebook.reader.ui.view.ControlPanelLayout>
+	</com.easyview.ebook.reader.ui.view.ControlPanelLayout>
 </LinearLayout>

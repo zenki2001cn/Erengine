@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="wrap_content" android:layout_height="wrap_content">
-	<com.foxconn.ebook.reader.ui.view.SearchDialogView
+	<com.easyview.ebook.reader.ui.view.SearchDialogView
 		android:layout_width="580px" android:layout_height="40px"
 		android:layout_gravity="left">
 
@@ -23,5 +23,5 @@
 		<Button android:id="@+id/id_search_next" android:text="@string/search_next"
 			android:layout_width="60px" android:layout_height="40px"
 			android:layout_toRightOf="@+id/id_search_previous" />
-	</com.foxconn.ebook.reader.ui.view.SearchDialogView>
+	</com.easyview.ebook.reader.ui.view.SearchDialogView>
 </RelativeLayout>

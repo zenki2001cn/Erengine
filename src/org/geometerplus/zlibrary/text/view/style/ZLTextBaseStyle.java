@@ -26,7 +26,7 @@ import org.geometerplus.zlibrary.text.model.ZLTextAlignmentType;
 import org.geometerplus.zlibrary.text.view.ZLTextStyle;
 import org.geometerplus.zlibrary.text.view.ZLTextHyperlink;
 
-import com.foxconn.ebook.reader.engine.util.Logger;
+import com.easyview.ebook.reader.engine.util.Logger;
 
 public class ZLTextBaseStyle extends ZLTextStyle {
 	private static final String GROUP = "Style";

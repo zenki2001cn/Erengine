@@ -22,9 +22,9 @@ package org.geometerplus.fbreader.fbreader;
 import org.geometerplus.zlibrary.core.options.ZLIntegerRangeOption;
 import org.geometerplus.zlibrary.text.view.style.ZLTextStyleCollection;
 
-import com.foxconn.ebook.reader.engine.core.EREngine;
-import com.foxconn.ebook.reader.engine.core.EngineCode;
-import com.foxconn.ebook.reader.engine.core.EngineCode.EngineMsgCode;
+import com.easyview.ebook.reader.engine.core.EREngine;
+import com.easyview.ebook.reader.engine.core.EngineCode;
+import com.easyview.ebook.reader.engine.core.EngineCode.EngineMsgCode;
 
 import android.util.Log;
 

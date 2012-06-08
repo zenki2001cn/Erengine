@@ -23,9 +23,9 @@ import java.io.File;
 
 import org.geometerplus.zlibrary.core.options.ZLStringOption;
 
-import com.foxconn.ebook.reader.engine.core.EREngine;
-import com.foxconn.ebook.reader.engine.core.ERManager;
-import com.foxconn.ebook.reader.engine.core.IEngineService;
+import com.easyview.ebook.reader.engine.core.EREngine;
+import com.easyview.ebook.reader.engine.core.ERManager;
+import com.easyview.ebook.reader.engine.core.IEngineService;
 
 import android.content.Context;
 import android.os.Environment;

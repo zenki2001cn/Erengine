@@ -2,10 +2,10 @@ package org.amse.ys.zip;
 
 import java.io.*;
 
-import com.foxconn.ebook.reader.engine.core.ERManager;
-import com.foxconn.ebook.reader.engine.core.IEngineService;
-import com.foxconn.ebook.reader.engine.util.EngineConfig;
-import com.foxconn.ebook.reader.engine.util.Logger;
+import com.easyview.ebook.reader.engine.core.ERManager;
+import com.easyview.ebook.reader.engine.core.IEngineService;
+import com.easyview.ebook.reader.engine.util.EngineConfig;
+import com.easyview.ebook.reader.engine.util.Logger;
 
 class DeflatingDecompressor extends Decompressor {
 	static private final String TAG = "DeflatingDecompressor-v3";

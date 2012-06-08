@@ -243,20 +243,21 @@ public class Adobe {
 			String currentStart);
 
 	static {
-		IEngineService ies = (IEngineService) ERManager
-				.getService(ERManager.ERENGINE_SERVICE);
-
-		String libPath = ies.getConfig().getLibraryPath();
-		String soPath = libPath + File.separator + "libadobehost.so";
-		
-		try {
-			if (libPath.equals(EngineConfig.DEFAULT_LIBRARY_LOCAL)) {
-				System.loadLibrary("adobehost");
-			} else {
-				System.load(soPath);
-			}
-		} catch (Exception e) {
-			Logger.eLog("EREngine", "load libraryerror = " + e.getMessage());
-		}
+		// Remove Adobe RMSDK support
+//		IEngineService ies = (IEngineService) ERManager
+//				.getService(ERManager.ERENGINE_SERVICE);
+//
+//		String libPath = ies.getConfig().getLibraryPath();
+//		String soPath = libPath + File.separator + "libadobehost.so";
+//		
+//		try {
+//			if (libPath.equals(EngineConfig.DEFAULT_LIBRARY_LOCAL)) {
+//				System.loadLibrary("adobehost");
+//			} else {
+//				System.load(soPath);
+//			}
+//		} catch (Exception e) {
+//			Logger.eLog("EREngine", "load libraryerror = " + e.getMessage());
+//		}
 	}
 }

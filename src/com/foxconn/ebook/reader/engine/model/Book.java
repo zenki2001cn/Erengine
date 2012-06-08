@@ -534,8 +534,9 @@ public class Book implements IBookChapterCursor {
 		int type = getBookType();
 
 		switch (type) {
-		case BookType.PDF:
-			return ReaderType.READER_TYPE_ADOBE;
+		// Remove Adobe RMSDK support
+//		case BookType.PDF:
+//			return ReaderType.READER_TYPE_ADOBE;
 		case BookType.EPUB:
 		case BookType.TXT:
 		case BookType.FB2:
@@ -568,9 +569,11 @@ public class Book implements IBookChapterCursor {
 			return;
 		}
 		
-		if (bookName.endsWith(".pdf")) {
-			mBookInfo.BookType = BookType.PDF;
-		} else if (bookName.endsWith(".epub")) {
+		// Remove Adobe RMSDK support
+//		if (bookName.endsWith(".pdf")) {
+//			mBookInfo.BookType = BookType.PDF;
+//		}
+		if (bookName.endsWith(".epub")) {
 			mBookInfo.BookType = BookType.EPUB;
 		} else if (bookName.endsWith(".fb2")) {
 			mBookInfo.BookType = BookType.FB2;

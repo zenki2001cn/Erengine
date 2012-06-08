@@ -3,7 +3,7 @@
  *
  * @revision:  none 
  *
- * @version    0.0.01
+ * @version    0.0.1
  * @author:    Zenki (zhajun), zenki2001cn@163.com
  * @date:      2011-8-1 下午01:10:35 
  */
@@ -165,9 +165,8 @@ public class FileBrowser extends Activity {
 					continue;
 				} else if (allFiles[i].isFile()) {
 					fileName = allFiles[i].getName().toLowerCase();
-
+					// Remove Adobe RMSDK support
 					if (fileName.endsWith("epub") || fileName.endsWith("fb2")
-							|| fileName.endsWith("pdf")
 							|| fileName.endsWith("txt")
 							|| fileName.endsWith("html")
 							|| fileName.endsWith("htm")) {

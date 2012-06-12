@@ -148,7 +148,7 @@ public class EasyViewer extends Activity {
 	protected void onDestroy() {
 		Log.d(TAG, "onDestroy");
 		closeBook();
-//		free();
+		free();
 
 		super.onDestroy();
 	}

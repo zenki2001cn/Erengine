@@ -43,8 +43,8 @@ import com.easyview.ebook.reader.easyviewer.R;
 public class FileBrowser extends Activity {
 	static private final String TAG = "FileBrowser";
 	private ListView mFileListView;
-	static private final String EXTERNAL_PATH = "/sdcard/external_sd/books/epub";
-//	static private final String EXTERNAL_PATH = "/sdcard/books";
+//	static private final String EXTERNAL_PATH = "/sdcard/external_sd/books/epub";
+	static private final String EXTERNAL_PATH = "/sdcard/books";
 	private IDatabaseService mIds;
 
 	private final int MSG_REFRESH_LIST = 1;

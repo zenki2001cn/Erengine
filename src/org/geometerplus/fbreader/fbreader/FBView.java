@@ -479,7 +479,6 @@ public final class FBView extends ZLTextView {
 			// TODO: separate color option for footer color
 			// modify by zenki-zha-xxx
 //			final ZLColor fgColor = getTextColor(ZLTextHyperlink.NO_LINK);
-			// 加載背景圖片
 			// modify by zenki-zha-xxx
 //			final ZLColor fillColor = reader.getColorProfile().FooterFillOption.getValue();
 
@@ -546,9 +545,9 @@ public final class FBView extends ZLTextView {
 			final int gaugeInternalRight =
 				left + lineWidth + (int)(1.0 * myGaugeWidth * pagesProgress / bookLength);
 
-			// 加載背景圖片
 			// modify by zenki-zha-xxx
-			// context.setFillColor(fillColor);
+//			ZLColor fillColor = new ZLColor(0, 0, 120);
+//			context.setFillColor(fillColor);
 //			context.fillRectangle(left + 1, height - 2 * lineWidth, gaugeInternalRight, lineWidth + 1);
 
 			if (reader.FooterShowTOCMarksOption.getValue()) {

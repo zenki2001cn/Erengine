@@ -1655,7 +1655,10 @@ public abstract class ReaderWrapper implements IAction {
 	 */
 	protected void updateView() {
 		if (updateViewEnabled() && !isBorder()) {
+			Logger.eLog(TAG, "updateView --- debug show");
 			mEngine.getMessageHandler().sendMessage(EngineHandler.UPDATE_VIEW);
+		} else {
+			Logger.eLog(TAG, "updateView --- debug not show");
 		}
 	}
 

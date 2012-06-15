@@ -31,6 +31,8 @@ import org.geometerplus.zlibrary.text.model.*;
 import org.geometerplus.zlibrary.text.hyphenation.*;
 import org.geometerplus.zlibrary.text.view.style.ZLTextStyleCollection;
 
+import com.easyview.ebook.reader.engine.util.Logger;
+
 import android.util.Log;
 
 public abstract class ZLTextView extends ZLTextViewBase {
@@ -181,7 +183,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 		if (!end.isNull()) {
 			gotoMark(myModel.getNextMark(end.getMark()));
 		} else {
-			Log.e(TAG, "find next debug");
+			Logger.eLog(TAG, "find next debug");
 		}
 	}
 
@@ -195,7 +197,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 		if (!start.isNull()) {
 			gotoMark(myModel.getPreviousMark(start.getMark()));
 		} else {
-			Log.e(TAG, "findPrevious debug");
+			Logger.eLog(TAG, "findPrevious debug");
 		}
 	}
 
@@ -405,7 +407,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 			return;
 		}
 
-		// Log.e(TAG, "paint pageIndex = " + pageIndex + " paragraphsNumber = "
+		// Logger.eLog(TAG, "paint pageIndex = " + pageIndex + " paragraphsNumber = "
 		// + myModel.getParagraphsNumber());
 
 		ZLTextPage page;
@@ -436,7 +438,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 		preparePaintInfo(page);
 
 		if (page.StartCursor.isNull() || page.EndCursor.isNull()) {
-			Log.i(TAG, "page.StartCursor == null");
+			Logger.eLog(TAG, "page.StartCursor == null");
 			return;
 		}
 
@@ -444,7 +446,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 		final int[] labels = new int[lineInfos.size() + 1];
 		int y = getTopMargin();
 		int index = 0;
-		// Log.e(TAG, "drawTextLine index = " + index + " lineInfos size = "
+		// Logger.eLog(TAG, "drawTextLine index = " + index + " lineInfos size = "
 		// + lineInfos.size());
 		
 		// modify by zenki-zha-xxx
@@ -455,12 +457,12 @@ public abstract class ZLTextView extends ZLTextViewBase {
 			prepareTextLine(page, info, y);
 			y += info.Height + info.Descent + info.VSpaceAfter;
 			labels[++index] = page.TextElementMap.size();
-			// Log.e(TAG, "prepareTextLine = " + labels + " y = " + y);
+			// Logger.eLog(TAG, "prepareTextLine = " + labels + " y = " + y);
 		}
 
 		y = getTopMargin();
 		index = 0;
-		// Log.e(TAG, "drawTextLine index = " + index + " lineInfos size = "
+		// Logger.eLog(TAG, "drawTextLine index = " + index + " lineInfos size = "
 		// + lineInfos.size());
 		
 		it = lineInfos.iterator();
@@ -472,7 +474,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 		}
 
 		final ZLTextRegion selectedElementRegion = getSelectedRegion(page);
-		// Log.e(TAG, "selectedElementRegion = " + selectedElementRegion);
+		// Logger.eLog(TAG, "selectedElementRegion = " + selectedElementRegion);
 		if (selectedElementRegion != null && myHighlightSelectedRegion) {
 			selectedElementRegion.draw(context);
 		}
@@ -591,7 +593,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 				+ getTextStyle().getSpaceAfter()) / charsPerParagraph);
 		final int linesPerPage = effectiveHeight / strHeight;
 
-		// Log.e(TAG, "computeCharsPerPage = " + charsPerLine * linesPerPage
+		// Logger.eLog(TAG, "computeCharsPerPage = " + charsPerLine * linesPerPage
 		// + " charsPerLine = " + charsPerLine + " linesPerPage = "
 		// + linesPerPage);
 
@@ -809,7 +811,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 		page.LineInfos.clear();
 		int counter = 0;
 		do {
-			// Log.e(TAG, "buildInfos counter = " + counter);
+			// Logger.eLog(TAG, "buildInfos counter = " + counter);
 
 			resetTextStyle();
 			final ZLTextParagraphCursor paragraphCursor = result.getParagraphCursor();
@@ -834,7 +836,7 @@ public abstract class ZLTextView extends ZLTextViewBase {
 		} while (result.isEndOfParagraph() && result.nextParagraph() && !result.getParagraphCursor().isEndOfSection() && (textAreaHeight >= 0));
 		resetTextStyle();
 
-		// Log.e(TAG, "buildInfos 3 counter = " + counter);
+		// Logger.eLog(TAG, "buildInfos 3 counter = " + counter);
 	}
 	
 	// add by zenki-zha-xxx
@@ -1349,12 +1351,12 @@ private boolean isHyphenationPossible() {
 		}
 		page.PaintState = PaintStateEnum.READY;
 
-		// Log.e(TAG, "preparePaintInfo page.PaintState = " + page.PaintState);
+		// Logger.eLog(TAG, "preparePaintInfo page.PaintState = " + page.PaintState);
 
 		// TODO: cache?
 		myLineInfoCache.clear();
 
-		// Log.e(TAG, "preparePaintInfo myPreviousPage = " + myPreviousPage);
+		// Logger.eLog(TAG, "preparePaintInfo myPreviousPage = " + myPreviousPage);
 
 		if (page == myCurrentPage) {
 			myPreviousPage.reset();

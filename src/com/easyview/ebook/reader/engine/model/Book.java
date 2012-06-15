@@ -112,6 +112,19 @@ public class Book implements IBookChapterCursor {
 				return false;
 			}
 		}
+		
+		/**
+		 * 打印META信息.
+		 *
+		 * @return void
+		 */
+		public void dumpvalue() {
+			Logger.iLog(TAG, "Book.Meta dump: META_TITLE = " + mData[META_TITLE]);
+			Logger.iLog(TAG, "Book.Meta dump: META_AUTHOR = " + mData[META_AUTHOR]);
+			Logger.iLog(TAG, "Book.Meta dump: META_PUBLISHER = " + mData[META_PUBLISHER]);
+			Logger.iLog(TAG, "Book.Meta dump: META_ENCODING = " + mData[META_ENCODING]);
+			Logger.iLog(TAG, "Book.Meta dump: META_LANGUAGE = " + mData[META_LANGUAGE]);
+		}
 	}
 
 	/**
@@ -569,19 +582,22 @@ public class Book implements IBookChapterCursor {
 			return;
 		}
 		
+		String name = bookName.toLowerCase();
+//		Logger.dLog(TAG, "setBookType bookname = " + name);
+		
 		// Remove Adobe RMSDK support
 //		if (bookName.endsWith(".pdf")) {
 //			mBookInfo.BookType = BookType.PDF;
 //		}
-		if (bookName.endsWith(".epub")) {
+		if (name.endsWith(".epub")) {
 			mBookInfo.BookType = BookType.EPUB;
-		} else if (bookName.endsWith(".fb2")) {
+		} else if (name.endsWith(".fb2")) {
 			mBookInfo.BookType = BookType.FB2;
-		} else if (bookName.endsWith(".txt")) {
+		} else if (name.endsWith(".txt")) {
 			mBookInfo.BookType = BookType.TXT;
-		} else if (bookName.endsWith(".htm")) {
+		} else if (name.endsWith(".htm")) {
 			mBookInfo.BookType = BookType.HTM;
-		} else if (bookName.endsWith(".html")) {
+		} else if (name.endsWith(".html")) {
 			mBookInfo.BookType = BookType.HTML;
 		} else {
 			mBookInfo.BookType = BookType.UNKNOW;
@@ -1359,6 +1375,8 @@ public class Book implements IBookChapterCursor {
 			if (null == path) {
 				return false;
 			}
+			
+			Logger.dLog(TAG, "checkFileExists path = " + path);
 			File file = new File(path);
 			if (!file.isFile() || !file.exists()) {
 				return false;
@@ -1373,7 +1391,7 @@ public class Book implements IBookChapterCursor {
 		}
 
 		mIsExists = true;
-		setBookType(getBookName().toLowerCase());
+		setBookType(getBookName());
 
 		return true;
 	}

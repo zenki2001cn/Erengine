@@ -40,14 +40,14 @@ public class ProgressDisplayerView extends View {
 	private IProgressControllerCallback mControlCallback = null;
 	
 	private final float mRectLeft = 0;
-	private final float mRectTop = 15;
+	private final float mRectTop = 2;
 	private final float mRectRight = 450;
-	private final float mRectBottom = 25;
+	private final float mRectBottom = 8;
 	
-	private final int mColorA = 128;
-	private final int mColorR = 77;
-	private final int mColorG = 77;
-	private final int mColorB = 77;
+	private final int mColorA = 200;
+	private final int mColorR = 0;
+	private final int mColorG = 0;
+	private final int mColorB = 0;
 	
 	public ProgressDisplayerView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);

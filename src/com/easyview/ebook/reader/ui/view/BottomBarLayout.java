@@ -53,7 +53,9 @@ public class BottomBarLayout extends EVBaseRelativeLayout {
 		mProgressDisplayer = (ProgressDisplayerView) findViewById(R.id.id_page_progress);
 		
 		mProgressDisplayer.setProgressControllerCallback(ipGotoPage);
-		mPageNumView.setOnClickListener(cTvPageNum);
+		
+		// 取消跳页功能
+		//mPageNumView.setOnClickListener(cTvPageNum);
 	}
 	
 	public void updatePageInfo(String info) {

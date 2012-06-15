@@ -126,7 +126,7 @@ public abstract class FormatPlugin {
 		if ((encoding.equals("US-ASCII")) || (encoding.equals("ISO-8859-1"))) {
 			language = "en";
 		} else if ((encoding.equals("GBK")) || (encoding.equals("GB2312"))
-				|| (encoding.equals("BIG5"))) {
+				|| (encoding.equals("BIG5")) || (encoding.equals("UTF-16LE"))) {
 			language = "zh";
 		} else if ((encoding.equals("EUC-KR"))) {
 			language = "kr";

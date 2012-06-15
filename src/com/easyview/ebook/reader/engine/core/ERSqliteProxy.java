@@ -136,7 +136,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			Uri uri = mContext.getContentResolver().insert(
 					ERUris.BOOK_CONTENT_URI, values);
 		} catch (Exception e) {
-			Log.e(TAG, "insertBookInfo error = " + e);
+			Logger.eLog(TAG, "insertBookInfo error = " + e);
 			return false;
 		}
 
@@ -216,7 +216,7 @@ public class ERSqliteProxy implements IDatabaseService {
 
 		try {
 			if (valuesList.isEmpty()) {
-				Log.e(TAG, "addBooks is empty");
+				Logger.eLog(TAG, "addBooks is empty");
 				return false;
 			}
 
@@ -228,7 +228,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				return false;
 			}
 		} catch (Exception e) {
-			Log.e(TAG, "bulkInsert error = " + e);
+			Logger.eLog(TAG, "bulkInsert error = " + e);
 			return false;
 		}
 
@@ -255,7 +255,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			resolver.delete(ERUris.BOOK_CONTENT_URI, BookColumns._ID + "=?",
 					new String[] { String.valueOf(id) });
 		} catch (Exception e) {
-			Log.e(TAG, "deleteBookInfo error = " + e);
+			Logger.eLog(TAG, "deleteBookInfo error = " + e);
 			return false;
 		}
 
@@ -295,7 +295,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			executeSQL(sqlResetBookmarkSeq);
 			executeSQL(sqlResetBookEmphasisSeq);
 		} catch (Exception e) {
-			Log.e(TAG, "deleteAllBook error = " + e);
+			Logger.eLog(TAG, "deleteAllBook error = " + e);
 			return false;
 		}
 
@@ -346,7 +346,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				return false;
 			}
 		} catch (Exception e) {
-			Log.e(TAG, "updateBookInfo error = " + e);
+			Logger.eLog(TAG, "updateBookInfo error = " + e);
 			return false;
 		}
 
@@ -373,7 +373,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				BookColumns.DEFAULT_SORT);
 
 		if (null == c) {
-			Log.e(TAG, "queryBookInfo cursor == null");
+			Logger.eLog(TAG, "queryBookInfo cursor == null");
 			return false;
 		}
 
@@ -463,7 +463,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				BookColumns.FILE_PATH + "='" + filePath + "'", null, null);
 
 		if (null == c) {
-			Log.e(TAG, "queryBookInfo cursor == null");
+			Logger.eLog(TAG, "queryBookInfo cursor == null");
 			return -1;
 		}
 
@@ -498,7 +498,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				BookColumns.DEFAULT_SORT);
 
 		if (null == c) {
-			Log.e(TAG, "queryBook cursor == null");
+			Logger.eLog(TAG, "queryBook cursor == null");
 			return null;
 		}
 
@@ -518,7 +518,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			bookIds[i] = id;
 
 			c.moveToNext();
-			id++;
+			i++;
 		}
 
 		if (c != null) {
@@ -546,7 +546,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				BookColumns.DEFAULT_SORT);
 
 		if (null == c) {
-			Log.e(TAG, "queryBook cursor == null");
+			Logger.eLog(TAG, "queryBook cursor == null");
 			return null;
 		}
 
@@ -618,7 +618,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			Uri uri = mContext.getContentResolver().insert(
 					ERUris.BOOKMARK_CONTENT_URI, values);
 		} catch (Exception e) {
-			Log.e(TAG, "insertBookInfo error = " + e);
+			Logger.eLog(TAG, "insertBookInfo error = " + e);
 			return false;
 		}
 
@@ -648,7 +648,7 @@ public class ERSqliteProxy implements IDatabaseService {
 							+ BookmarkColumns.LOCATION + "=?", new String[] {
 							String.valueOf(id), location });
 		} catch (Exception e) {
-			Log.e(TAG, "deleteBookmark error = " + e);
+			Logger.eLog(TAG, "deleteBookmark error = " + e);
 			return false;
 		}
 
@@ -677,7 +677,7 @@ public class ERSqliteProxy implements IDatabaseService {
 							+ BookmarkColumns.LOCATION + "=?", new String[] {
 							String.valueOf(id), location });
 		} catch (Exception e) {
-			Log.e(TAG, "deleteBookmarkByLocation error = " + e);
+			Logger.eLog(TAG, "deleteBookmarkByLocation error = " + e);
 			return false;
 		}
 
@@ -707,7 +707,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				null);
 
 		if (null == c) {
-			Log.e(TAG, "queryAllBookmarks cursor == null");
+			Logger.eLog(TAG, "queryAllBookmarks cursor == null");
 			return false;
 		}
 
@@ -782,7 +782,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				return false;
 			}
 		} catch (Exception e) {
-			Log.e(TAG, "updateBookmark error = " + e);
+			Logger.eLog(TAG, "updateBookmark error = " + e);
 			return false;
 		}
 
@@ -810,7 +810,7 @@ public class ERSqliteProxy implements IDatabaseService {
 					BookmarkColumns.BOOK_ID + "=?",
 					new String[] { String.valueOf(id) });
 		} catch (Exception e) {
-			Log.e(TAG, "deleteAllBookmark error = " + e);
+			Logger.eLog(TAG, "deleteAllBookmark error = " + e);
 			return false;
 		}
 
@@ -838,7 +838,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				BookmarkColumns.DEFAULT_SORT);
 
 		if (null == c) {
-			Log.e(TAG, "queryAllBookmarks cursor == null");
+			Logger.eLog(TAG, "queryAllBookmarks cursor == null");
 			return false;
 		}
 
@@ -930,7 +930,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			Uri uri = mContext.getContentResolver().insert(
 					ERUris.BOOKEMPHASIS_CONTENT_URI, values);
 		} catch (Exception e) {
-			Log.e(TAG, "insertBookEmphasis error = " + e);
+			Logger.eLog(TAG, "insertBookEmphasis error = " + e);
 			return false;
 		}
 
@@ -962,7 +962,7 @@ public class ERSqliteProxy implements IDatabaseService {
 							+ BookEmphasisColumns.END_CURSOR + "=?",
 					new String[] { String.valueOf(id), start, end });
 		} catch (Exception e) {
-			Log.e(TAG, "deleteBookEmphasis error = " + e);
+			Logger.eLog(TAG, "deleteBookEmphasis error = " + e);
 			return false;
 		}
 
@@ -991,7 +991,7 @@ public class ERSqliteProxy implements IDatabaseService {
 							+ BookEmphasisColumns.LOCATION + "=?",
 					new String[] { String.valueOf(id), location });
 		} catch (Exception e) {
-			Log.e(TAG, "deleteBookEmphasisByLocation error = " + e);
+			Logger.eLog(TAG, "deleteBookEmphasisByLocation error = " + e);
 			return false;
 		}
 
@@ -1021,7 +1021,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				new String[] { String.valueOf(id), location }, null);
 
 		if (null == c) {
-			Log.e(TAG, "queryAllBookEmphasisByLocation cursor == null");
+			Logger.eLog(TAG, "queryAllBookEmphasisByLocation cursor == null");
 			return false;
 		}
 
@@ -1118,7 +1118,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				return false;
 			}
 		} catch (Exception e) {
-			Log.e(TAG, "insertBookEmphasis error = " + e);
+			Logger.eLog(TAG, "insertBookEmphasis error = " + e);
 			return false;
 		}
 
@@ -1146,7 +1146,7 @@ public class ERSqliteProxy implements IDatabaseService {
 					BookEmphasisColumns.BOOK_ID + "=?",
 					new String[] { String.valueOf(id) });
 		} catch (Exception e) {
-			Log.e(TAG, "deleteAllBookEmphasis error = " + e);
+			Logger.eLog(TAG, "deleteAllBookEmphasis error = " + e);
 			return false;
 		}
 
@@ -1175,7 +1175,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				BookEmphasisColumns.DEFAULT_SORT);
 
 		if (null == c) {
-			Log.e(TAG, "queryAllBookEmphasis cursor == null");
+			Logger.eLog(TAG, "queryAllBookEmphasis cursor == null");
 			return false;
 		}
 
@@ -1249,10 +1249,10 @@ public class ERSqliteProxy implements IDatabaseService {
 			if (client != null) {
 				provider = (ERSqliteProvider) client.getLocalContentProvider();
 			} else {
-				Log.e(TAG, "executeSQL provider == null");
+				Logger.eLog(TAG, "executeSQL provider == null");
 			}
 		} else {
-			Log.e(TAG, "executeSQL resolver == null");
+			Logger.eLog(TAG, "executeSQL resolver == null");
 		}
 
 		if (provider != null) {
@@ -1326,7 +1326,7 @@ public class ERSqliteProxy implements IDatabaseService {
 				BookColumns.DEFAULT_SORT);
 
 		if (null == c) {
-			Log.e(TAG, "queryBookInfo cursor == null");
+			Logger.eLog(TAG, "queryBookInfo cursor == null");
 			return false;
 		}
 
@@ -1352,7 +1352,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			return true;
 		}
 
-		Log.e(TAG, "!canWork mContext == null");
+		Logger.eLog(TAG, "!canWork mContext == null");
 
 		return false;
 	}
@@ -1375,7 +1375,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			resolver.delete(ERUris.BOOK_CONTENT_URI, BookColumns.FILE_PATH
 					+ "=?", new String[] { filePath });
 		} catch (Exception e) {
-			Log.e(TAG, "deleteBook error = " + e);
+			Logger.eLog(TAG, "deleteBook error = " + e);
 			return false;
 		}
 

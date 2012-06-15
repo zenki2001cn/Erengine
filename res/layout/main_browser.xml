@@ -3,11 +3,28 @@
 	android:id="@+id/id_file_browser_main" android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical">
-	<RelativeLayout android:id="@+id/id_browser_wrapper"
-		android:layout_width="fill_parent" android:layout_height="fill_parent"
-		>
+	<RelativeLayout android:id="@+id/id_browser_title_wrapper"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" >
+		<ImageButton android:id="@+id/id_browser_local_path"
+		    android:background="@drawable/local_path"
+			android:layout_marginLeft="20px" 
+			android:layout_width="240px" android:layout_height="64px" />
+		<ImageButton android:id="@+id/id_browser_recent_path"
+		    android:background="@drawable/recent_reading"
+		    android:layout_toRightOf="@+id/id_browser_local_path"
+			android:layout_marginLeft="50px" 
+			android:layout_width="240px" android:layout_height="64px" />
+	</RelativeLayout>
+	
+	<RelativeLayout android:id="@+id/id_browser_list_wrapper"
+	    android:layout_below="@+id/id_browser_title_wrapper"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" >
 		<ListView android:id="@+id/id_file_list"
-			android:layout_marginLeft="25px" android:layout_width="fill_parent"
-			android:layout_height="fill_parent" />
+		    android:layout_marginLeft="10px" android:layout_marginTop="20px"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:visibility="invisible" />
+		<ListView android:id="@+id/id_recent_list"
+		    android:layout_marginLeft="10px" android:layout_marginTop="20px"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
 	</RelativeLayout>
 </LinearLayout>

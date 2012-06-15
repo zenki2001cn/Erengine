@@ -2,5 +2,7 @@
 <resources>
 	<color name="black">#FF000000</color>
 	<color name="white">#FFFFFFFF</color>
-	<color name="transparent_background">#50000000</color>
+	<color name="transparent_background">#00000000</color>
+	<color name="progress_background">#50C5C5C5</color>
+	<color name="gray">#00C5C5C5</color>
 </resources>

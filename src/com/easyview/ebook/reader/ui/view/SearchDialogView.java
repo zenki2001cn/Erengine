@@ -10,9 +10,7 @@
 
 package com.easyview.ebook.reader.ui.view;
 
-import com.easyview.ebook.reader.engine.model.Book;
 import com.easyview.ebook.reader.engine.model.IBookSearchCursor;
-import com.easyview.ebook.reader.engine.util.Logger;
 import com.easyview.ebook.reader.ui.controller.EasyViewer;
 import com.easyview.ebook.reader.ui.controller.IControlCenterService;
 import com.easyview.ebook.reader.ui.controller.IControlCenterService.COMMAND_TYPE;
@@ -22,17 +20,17 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class SearchDialogView extends EVBaseRelativeLayout {
 	static private final String TAG = "SearchDialogView";
 	
 	private EditText mEditSearchKeyword;
-	private Button 	mBtnSearch;
-	private Button 	mBtnSearchNext;
-	private Button 	mBtnSearchPrevious;
-	private Button 	mBtnSearchExit;
+	private ImageButton 	mBtnSearch;
+	private ImageButton 	mBtnSearchNext;
+	private ImageButton 	mBtnSearchPrevious;
+	private ImageButton 	mBtnSearchExit;
 	
 	public SearchDialogView(Context context) {
 		super(context);
@@ -48,10 +46,10 @@ public class SearchDialogView extends EVBaseRelativeLayout {
 	
 	private void initView() {
 		mEditSearchKeyword = (EditText) findViewById(R.id.id_search_edit);
-		mBtnSearch = (Button) findViewById(R.id.id_search_button);
-		mBtnSearchNext = (Button) findViewById(R.id.id_search_next);
-		mBtnSearchPrevious = (Button) findViewById(R.id.id_search_previous);
-		mBtnSearchExit = (Button) findViewById(R.id.id_search_exit);
+		mBtnSearch = (ImageButton) findViewById(R.id.id_search_button);
+		mBtnSearchNext = (ImageButton) findViewById(R.id.id_search_next);
+		mBtnSearchPrevious = (ImageButton) findViewById(R.id.id_search_previous);
+		mBtnSearchExit = (ImageButton) findViewById(R.id.id_search_exit);
 		
 		mBtnSearch.setOnClickListener(cBtnSearchListener);
 		mBtnSearchNext.setOnClickListener(cBtnSearchNextListener);

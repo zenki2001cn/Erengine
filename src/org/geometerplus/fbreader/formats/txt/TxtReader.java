@@ -17,7 +17,7 @@ import java.io.UnsupportedEncodingException;
 import org.geometerplus.fbreader.bookmodel.BookModel;
 import org.geometerplus.fbreader.bookmodel.BookReader;
 
-abstract public class TxtReader extends BookReader{
+abstract public class TxtReader extends BookReader {
 	static private final String TAG = "TxtReader";
 	protected final int BUFSIZE = 65535;
 	protected final int TAB_EQUAL_SPACE = 4;
@@ -25,7 +25,7 @@ abstract public class TxtReader extends BookReader{
 
 	public TxtReader(BookModel model) {
 		super(model);
-		
+
 		mEncoding = model.Book.getEncoding();
 	}
 
@@ -34,11 +34,11 @@ abstract public class TxtReader extends BookReader{
 	abstract protected void endDocumentHandler();
 
 	abstract protected boolean characterDataHandler(String str);
-	
+
 	abstract protected boolean spaceDataHandler(int num);
 
 	abstract protected boolean newLineHandler();
-	
+
 	abstract protected boolean newEmptyLineHandler();
 
 	public boolean readDocument(InputStream stream) {
@@ -66,20 +66,20 @@ abstract public class TxtReader extends BookReader{
 
 			for (int i = 0; i < length; i++) {
 				skipNewLine = false;
-				
+
 				switch (buffer[i]) {
 				// new line
 				case '\n':
-				case '\r':
-				{
+				case '\r': {
 					if ((buffer[i] == '\r') && ((i + 1) < length)
 							&& (buffer[i + 1] == '\n')) {
 						skipNewLine = true;
 					}
-					
+
 					if (charsetLen > 0) {
 						try {
-							str = new String(buffer, start, charsetLen, mEncoding);
+							str = new String(buffer, start, charsetLen,
+									mEncoding);
 							characterDataHandler(str);
 							charsetLen = 0;
 						} catch (UnsupportedEncodingException e) {
@@ -89,15 +89,15 @@ abstract public class TxtReader extends BookReader{
 					} else {
 						newEmptyLineHandler();
 					}
-					
+
 					if (skipNewLine) {
 						++i;
 					}
-					
+
 					start = i + 1;
 				}
-				break;
-				
+					break;
+
 				// space char handler
 				case 0x08:
 				case 0x0B:
@@ -105,32 +105,34 @@ abstract public class TxtReader extends BookReader{
 				case ' ': {
 					if (charsetLen > 0) {
 						try {
-							str = new String(buffer, start, charsetLen, mEncoding);
+							str = new String(buffer, start, charsetLen,
+									mEncoding);
 							characterDataHandler(str);
 							charsetLen = 0;
 						} catch (UnsupportedEncodingException e) {
 							e.printStackTrace();
 						}
 					}
-					
+
 					spaceDataHandler(1);
 					start = i + 1;
 				}
 					break;
-					
+
 				// horizontal tab handler
 				case '\t': {
 					int lack = TAB_EQUAL_SPACE;
-					
+
 					if (charsetLen > 0) {
 						try {
-							str = new String(buffer, start, charsetLen, mEncoding);
+							str = new String(buffer, start, charsetLen,
+									mEncoding);
 							characterDataHandler(str);
 							charsetLen = 0;
 						} catch (UnsupportedEncodingException e) {
 							e.printStackTrace();
 						}
-						
+
 						int left = charsetLen % TAB_EQUAL_SPACE;
 						if (left > 0) {
 							lack = TAB_EQUAL_SPACE - left;
@@ -138,7 +140,7 @@ abstract public class TxtReader extends BookReader{
 							lack = TAB_EQUAL_SPACE;
 						}
 					}
-					
+
 					spaceDataHandler(lack);
 					start = i + 1;
 				}

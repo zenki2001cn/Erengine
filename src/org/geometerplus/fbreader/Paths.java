@@ -60,7 +60,7 @@ public abstract class Paths {
 	}
 
 	public static String cacheDirectory() {
-		return BooksDirectoryOption().getValue() + "/.FBReader";
+		return BooksDirectoryOption().getValue() + "/.Easyview";
 	}
 
 	public static String networkCacheDirectory() {

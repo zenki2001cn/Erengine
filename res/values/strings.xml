@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- main_browser.xml -->
+    <string name="browser_local_path">扫描目录：</string>
+    <string name="browser_recent_path">最近阅读</string>
+    
+    <!-- control_panel_flat.xml -->
+	<string name="panel_title_flat">功能菜单</string>
 
 	<!-- main.xml -->
 	<string name="app_name">EasyView</string>

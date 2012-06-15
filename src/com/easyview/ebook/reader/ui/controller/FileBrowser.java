@@ -11,7 +11,9 @@
 package com.easyview.ebook.reader.ui.controller;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -22,38 +24,66 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 
 import com.easyview.ebook.reader.engine.core.ERManager;
 import com.easyview.ebook.reader.engine.core.IDatabaseService;
 import com.easyview.ebook.reader.engine.core.IEngineService;
 import com.easyview.ebook.reader.engine.model.Book;
-import com.easyview.ebook.reader.engine.util.Logger;
 import com.easyview.ebook.reader.easyviewer.R;
 
 public class FileBrowser extends Activity {
 	static private final String TAG = "FileBrowser";
-	private ListView mFileListView;
-//	static private final String EXTERNAL_PATH = "/sdcard/external_sd/books/epub";
-	static private final String EXTERNAL_PATH = "/sdcard/books";
+
+	private SharedPreferences mSharedPreferences;
+	private ListView mLocalListView;
+	private ListView mRecentListView;
+	private ImageButton mBrowserLocalButton;
+	private ImageButton mBrowserRecentButton;
+	private String mScanLocalPath;
 	private IDatabaseService mIds;
 
-	private final int MSG_REFRESH_LIST = 1;
+	ArrayList<RecentListItem> mRecentListItems = new ArrayList<FileBrowser.RecentListItem>();
+	ArrayList<LocalListItem> mLocalListItems = new ArrayList<FileBrowser.LocalListItem>();
+	BrowserRecentListAdapter mBrowserRecentListAdapter;
+	BrowserLocalListAdapter mBrowserLocalListAdapter;
+
+	static private final String EXTERNAL_PATH = "/sdcard";
+	static private final String UP_DIR = "..";
+	private final String KEY_SCAN_PATH = "scan_path";
+
+	private final int MSG_REFRESH_LOCAL_LIST = 1;
+	private final int MSG_REFRESH_RECENT_LIST = 2;
+
 	Handler mHandler = new Handler() {
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
-			case MSG_REFRESH_LIST:
-				refreshList();
+			case MSG_REFRESH_LOCAL_LIST:
+				refreshLocalList(mScanLocalPath);
+				break;
+			case MSG_REFRESH_RECENT_LIST:
+				mBrowserRecentListAdapter = new BrowserRecentListAdapter(
+						FileBrowser.this, mRecentListItems);
+				mRecentListView.setAdapter(mBrowserRecentListAdapter);
 				break;
 			default:
 				break;
@@ -65,8 +95,10 @@ public class FileBrowser extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.main_browser);
+
+		// 读取配置信息
+		mSharedPreferences = getPreferences(MODE_PRIVATE);
 
 		initView();
 		// 初始化Engine
@@ -74,11 +106,15 @@ public class FileBrowser extends Activity {
 				.getService(ERManager.ERENGINE_SERVICE);
 		ies.setContext(this);
 
-		mHandler.sendEmptyMessageDelayed(MSG_REFRESH_LIST, 500);
+		// mHandler.sendEmptyMessageDelayed(MSG_REFRESH_LOCAL_LIST, 500);
+		refresRecentList();
 	}
 
 	@Override
 	protected void onResume() {
+		mScanLocalPath = mSharedPreferences.getString(KEY_SCAN_PATH,
+				EXTERNAL_PATH);
+
 		registerMediaReceiver();
 
 		super.onResume();
@@ -86,6 +122,10 @@ public class FileBrowser extends Activity {
 
 	@Override
 	protected void onPause() {
+		SharedPreferences.Editor edit = mSharedPreferences.edit();
+		edit.putString(KEY_SCAN_PATH, mScanLocalPath);
+		edit.commit();
+
 		unregisterMediaReceiver();
 
 		super.onPause();
@@ -97,30 +137,105 @@ public class FileBrowser extends Activity {
 	}
 
 	public void initView() {
-		mFileListView = (ListView) findViewById(R.id.id_file_list);
+		mLocalListView = (ListView) findViewById(R.id.id_file_list);
+		mRecentListView = (ListView) findViewById(R.id.id_recent_list);
+		mBrowserLocalButton = (ImageButton) findViewById(R.id.id_browser_local_path);
+		mBrowserRecentButton = (ImageButton) findViewById(R.id.id_browser_recent_path);
 
-		mFileListView.setOnItemClickListener(cListFileClicked);
+		mLocalListView.setOnItemClickListener(cLocalFileItemClicked);
+		mRecentListView.setOnItemClickListener(cRecentFileItemClicked);
+		mBrowserLocalButton.setOnClickListener(mRefreshLocalListener);
+		mBrowserRecentButton.setOnClickListener(mRefreshRecentListener);
 	}
 
-	private OnItemClickListener cListFileClicked = new OnItemClickListener() {
+	private OnItemClickListener cLocalFileItemClicked = new OnItemClickListener() {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			ListView listView = (ListView) parent;
 
 			Bundle bundle = new Bundle();
-			String path = listView.getItemAtPosition(position).toString();
-			bundle.putString("fileName", path);
-			Log.d(TAG, "openBook = " + path);
+			LocalListItem item = (LocalListItem) listView
+					.getItemAtPosition(position);
+			String pathName = item.getPathName();
+			String fileName = item.getFileName();
+			File file = new File(pathName);
 
-			Intent i = new Intent();
-			ComponentName comp = new ComponentName(
-					"com.easyview.ebook.reader.easyviewer",
-					"com.easyview.ebook.reader.ui.controller.EasyViewer");
-			i.setComponent(comp);
-			i.putExtras(bundle);
-			i.setAction("android.intent.action.VIEW");
-			startActivityForResult(i, 0);
+			Log.d(TAG, "getAbsolutePath " + file.getAbsolutePath());
+
+			// 返回上一级目录
+			if (fileName.equals(UP_DIR)) {
+				refreshLocalList(file.getParent());
+			} else if (file.isFile()) {
+				bundle.putString(EasyViewer.INTENT_KEY_FILE_NAME, pathName);
+				Log.d(TAG, "openBook = " + pathName);
+
+				Intent i = new Intent();
+				ComponentName comp = new ComponentName(
+						"com.easyview.ebook.reader.easyviewer",
+						"com.easyview.ebook.reader.ui.controller.EasyViewer");
+				i.setComponent(comp);
+				i.putExtras(bundle);
+				// i.setAction("android.intent.action.VIEW");
+				startActivityForResult(i, 0);
+			} else if (file.isDirectory()) {
+				Log.d(TAG, "file is dir " + file.getAbsolutePath());
+				refreshLocalList(pathName);
+			}
+		}
+	};
+	
+	private OnItemClickListener cRecentFileItemClicked = new OnItemClickListener() {
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			ListView listView = (ListView) parent;
+
+			Bundle bundle = new Bundle();
+			RecentListItem item = (RecentListItem) listView
+					.getItemAtPosition(position);
+			String pathName = item.getPathName();
+			File file = new File(pathName);
+
+			Log.d(TAG, "getAbsolutePath " + file.getAbsolutePath());
+
+			// 返回上一级目录
+			if (!file.exists()) {
+				// 当前文件找不到
+			} else {
+				bundle.putString(EasyViewer.INTENT_KEY_FILE_NAME, pathName);
+				Log.d(TAG, "openBook = " + pathName);
+
+				Intent i = new Intent();
+				ComponentName comp = new ComponentName(
+						"com.easyview.ebook.reader.easyviewer",
+						"com.easyview.ebook.reader.ui.controller.EasyViewer");
+				i.setComponent(comp);
+				i.putExtras(bundle);
+				startActivityForResult(i, 0);
+			}
+		}
+	};
+
+	private OnClickListener mRefreshLocalListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			mLocalListView.setVisibility(View.VISIBLE);
+			mRecentListView.setVisibility(View.INVISIBLE);
+
+			refreshLocalList(mScanLocalPath);
+		}
+	};
+
+	private OnClickListener mRefreshRecentListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			mLocalListView.setVisibility(View.INVISIBLE);
+			mRecentListView.setVisibility(View.VISIBLE);
+
+//			refresRecentList();
 		}
 	};
 
@@ -137,22 +252,8 @@ public class FileBrowser extends Activity {
 		unregisterReceiver(mMediaReceiver);
 	}
 
-	private void refreshList() {
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-				FileBrowser.this, android.R.layout.simple_list_item_1);
-		mIds = (IDatabaseService) ERManager
-				.getService(ERManager.DATABASE_SERVICE);
-
-		if (!Environment.getExternalStorageState().equals(
-				Environment.MEDIA_MOUNTED)) {
-			Logger.dLog(TAG, "SD card is not exist");
-			mFileListView.setAdapter(adapter);
-			// 清空數據庫中的信息
-			mIds.deleteAllBooks();
-			return;
-		}
-
-		File dir = new File(EXTERNAL_PATH);
+	private ArrayList<String> scanDirctory(String dirPath) {
+		File dir = new File(dirPath);
 		File[] allFiles;
 		String fileName;
 		String filePath;
@@ -162,7 +263,8 @@ public class FileBrowser extends Activity {
 			allFiles = dir.listFiles();
 			for (int i = 0; i < allFiles.length; i++) {
 				if (allFiles[i].isDirectory()) {
-					continue;
+					filePath = allFiles[i].getAbsolutePath();
+					fileList.add(filePath);
 				} else if (allFiles[i].isFile()) {
 					fileName = allFiles[i].getName().toLowerCase();
 					// Remove Adobe RMSDK support
@@ -177,22 +279,266 @@ public class FileBrowser extends Activity {
 			}
 		}
 
-		mIds.addBook(fileList.toArray(new String[] {}));
+		return fileList;
+	}
 
-		String[] bookList = mIds.queryBooksPath();
-		int len = 0;
-		if (bookList != null) {
-			len = bookList.length;
+	private void refreshLocalList(String scanPath) {
+		if (!Environment.getExternalStorageState().equals(
+				Environment.MEDIA_MOUNTED)) {
+			Log.e(TAG, "SD card is not exist");
+			return;
 		}
-		for (int i = 0; i < len; i++) {
-			adapter.add(bookList[i]);
+
+		mScanLocalPath = scanPath;
+		ArrayList<String> fileList = scanDirctory(scanPath);
+
+		mLocalListItems.clear();
+		// 加入返回上层目录的..路径
+		if (!scanPath.equals(EXTERNAL_PATH)) {
+			mLocalListItems.add(new LocalListItem(UP_DIR, scanPath));
 		}
-		mFileListView.setAdapter(adapter);
+
+		for (String filePath : fileList) {
+			String fileName = new File(filePath).getName();
+			mLocalListItems.add(new LocalListItem(fileName, filePath));
+		}
+
+		mBrowserLocalListAdapter = new BrowserLocalListAdapter(this,
+				mLocalListItems);
+		mLocalListView.setAdapter(mBrowserLocalListAdapter);
+	}
+
+	private class RefreshRecentThread extends Thread {
+		private Handler mHandler;
+		private Context mContext;
+
+		public RefreshRecentThread(Handler handle, Context context) {
+			mHandler = handle;
+		}
+
+		@Override
+		public void run() {
+			mIds = (IDatabaseService) ERManager
+					.getService(ERManager.DATABASE_SERVICE);
+
+			int[] bookIds = mIds.queryBooksId();
+			int len = 0;
+			if (bookIds != null) {
+				len = bookIds.length;
+			}
+
+			mRecentListItems.clear();
+			for (int i = 0; i < len; i++) {
+				Book book = new Book(bookIds[i]);
+				if (mIds.queryBook(book)) {
+					String fileName = book.getBookName();
+					String filePath = book.getBookPath();
+					String author = book.getAuthor();
+					String perString = book.getLastLocation();
+					
+					SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+					String lastTime = sdf.format(new Date(book.getLastAccessTime()));
+					mRecentListItems.add(new RecentListItem(fileName, filePath,
+							author, perString, lastTime));
+				}
+			}
+
+			mHandler.sendEmptyMessage(MSG_REFRESH_RECENT_LIST);
+
+			super.run();
+		}
+	}
+
+	private void refresRecentList() {
+		new RefreshRecentThread(mHandler, this).start();
 	}
 
 	private final BroadcastReceiver mMediaReceiver = new BroadcastReceiver() {
 		public void onReceive(Context context, Intent intent) {
-			refreshList();
+			refreshLocalList(mScanLocalPath);
 		}
 	};
+
+	protected class LocalListItem {
+		String mFileName;
+		String mPathName;
+
+		public LocalListItem(String fileName, String pathName) {
+			mFileName = fileName;
+			mPathName = pathName;
+		}
+
+		public String getFileName() {
+			return mFileName;
+		}
+
+		public String getPathName() {
+			return mPathName;
+		}
+	}
+
+	protected class BrowserLocalListAdapter extends BaseAdapter {
+		LayoutInflater factory;
+		List<LocalListItem> mListItem;
+		Drawable mDrawFile;
+		Drawable mDrawFolder;
+		Context mContext;
+
+		public BrowserLocalListAdapter(Context context,
+				List<LocalListItem> listItems) {
+
+			mListItem = listItems;
+			mContext = context;
+			factory = (LayoutInflater) mContext
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			mDrawFile = context.getResources().getDrawable(R.drawable.file);
+			mDrawFolder = context.getResources().getDrawable(R.drawable.folder);
+		}
+
+		@Override
+		public int getCount() {
+			return mListItem.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return mListItem.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			View view = convertView;
+			ImageView imageView;
+			TextView textView;
+
+			if (view == null) {
+				view = factory.inflate(R.layout.browser_file_item, null);
+			}
+
+			LocalListItem item = (LocalListItem) getItem(position);
+			imageView = (ImageView) view
+					.findViewById(R.id.id_browser_filetype_image);
+			textView = (TextView) view.findViewById(R.id.id_browser_filename);
+
+			// set content
+			textView.setText(item.getFileName());
+
+			File file = new File(item.getPathName());
+			if (file.isDirectory()) {
+				imageView.setBackgroundDrawable(mDrawFolder);
+			} else {
+				imageView.setBackgroundDrawable(mDrawFile);
+			}
+
+			return view;
+		}
+	}
+
+	protected class RecentListItem {
+		String mFileName;
+		String mPathName;
+		String mAuthor;
+		String mPercent;
+		String mLastAccessTime;
+
+		public RecentListItem(String fileName, String pathName, String author,
+				String percent, String lastTime) {
+			mFileName = fileName;
+			mPathName = pathName;
+			mAuthor = author;
+			mPercent = percent;
+			mLastAccessTime = lastTime;
+		}
+
+		public String getFileName() {
+			return mFileName;
+		}
+
+		public String getPathName() {
+			return mPathName;
+		}
+
+		public String getAuthor() {
+			return mAuthor;
+		}
+
+		public String getPercent() {
+			return mPercent;
+		}
+
+		public String getLastTime() {
+			return mLastAccessTime;
+		}
+	}
+
+	protected class BrowserRecentListAdapter extends BaseAdapter {
+		LayoutInflater factory;
+		List<RecentListItem> mListItem;
+		Drawable mDrawFile;
+		Drawable mDrawFolder;
+		Context mContext;
+
+		public BrowserRecentListAdapter(Context context,
+				List<RecentListItem> listItems) {
+
+			mListItem = listItems;
+			mContext = context;
+			factory = (LayoutInflater) mContext
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			mDrawFile = context.getResources().getDrawable(R.drawable.file);
+			mDrawFolder = context.getResources().getDrawable(R.drawable.folder);
+		}
+
+		@Override
+		public int getCount() {
+			return mListItem.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return mListItem.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			View view = convertView;
+			ImageView imageView;
+			TextView fileNameTv;
+			TextView authorTv;
+			TextView percentAndTimeTv;
+
+			if (view == null) {
+				view = factory.inflate(R.layout.recent_file_item, null);
+			}
+
+			RecentListItem item = (RecentListItem) getItem(position);
+			imageView = (ImageView) view
+					.findViewById(R.id.id_recent_filetype_image);
+			fileNameTv = (TextView) view.findViewById(R.id.id_recent_filename);
+			authorTv = (TextView) view.findViewById(R.id.id_recent_author);
+			percentAndTimeTv = (TextView) view
+					.findViewById(R.id.id_recent_time_and_percent);
+
+			// set content
+			fileNameTv.setText(item.getFileName());
+			authorTv.setText(String.format("作者: %s", item.getAuthor()));
+
+			String strPercentAndTime = String.format("最后阅读: %s", item.getLastTime());
+			percentAndTimeTv.setText(strPercentAndTime);
+
+			imageView.setBackgroundDrawable(mDrawFile);
+
+			return view;
+		}
+	}
 }

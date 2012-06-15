@@ -39,6 +39,7 @@ import com.easyview.ebook.reader.easyviewer.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -73,6 +74,9 @@ public class EasyViewer extends Activity {
 	private boolean mIsBlock = false;
 	private String mBookTitle;
 	private final String PAGE_FORMAT = "%d/%d";
+	
+	// intent
+	static public final String INTENT_KEY_FILE_NAME = "FILE_NAME";
 
 	private final int MSG_INIT_ENGINE = 0;
 	private final int MSG_OPEN_BOOK = 1;
@@ -91,17 +95,36 @@ public class EasyViewer extends Activity {
 				mHandler.sendEmptyMessage(MSG_OPEN_BOOK);
 				break;
 			case MSG_OPEN_BOOK:
-				// String fileName = "/sdcard/demo.pdf";
-				String fileName = getIntent().getExtras().getString("fileName");
-				if (fileName != null) {
-					openBook(fileName);
-					break;
-				}
+				Intent intent = getIntent();
+				String action = intent.getAction();
+				Bundle bundle = intent.getExtras();
+				String fileName = null;
 				
-				int fileID = getIntent().getExtras().getInt("bookId");
-				if (fileID != 0) {
-					openBook(fileID);
-					break;
+				if (bundle != null) {
+					fileName = bundle.getString(INTENT_KEY_FILE_NAME);
+					if (fileName != null) {
+						openBook(fileName);
+						break;
+					}
+					
+					int fileID = bundle.getInt("bookId");
+					if (fileID != 0) {
+						openBook(fileID);
+						break;
+					}
+				} else if (action.equals(intent.ACTION_VIEW)) {
+					String data = intent.getDataString();
+					Logger.eLog(TAG, "Open Book data = " + data);
+					if (data.startsWith("file://")) {
+						fileName = data.substring(7);
+						if (fileName != null) {
+							openBook(fileName);
+							break;
+						}
+					}
+				} else {
+					Logger.eLog(TAG, "Open Book get fileName error");
+					finish();
 				}
 				break;
 
@@ -134,19 +157,19 @@ public class EasyViewer extends Activity {
 	protected void onStart() {
 		super.onStart();
 
-		Log.d(TAG, "onStart");
+		Logger.dLog(TAG, "onStart");
 	}
 
 	@Override
 	protected void onStop() {
-		Log.d(TAG, "onStop");
+		Logger.dLog(TAG, "onStop");
 
 		super.onStop();
 	}
 
 	@Override
 	protected void onDestroy() {
-		Log.d(TAG, "onDestroy");
+		Logger.dLog(TAG, "onDestroy");
 		closeBook();
 		free();
 
@@ -335,6 +358,7 @@ public class EasyViewer extends Activity {
 		config.setViewHeight(mRenderView.getHeight());
 		config.setFontLevel(1);
 		config.setAutoLoadDB(true);
+		config.setDisplayDpi(160);
 
 		return config;
 	}

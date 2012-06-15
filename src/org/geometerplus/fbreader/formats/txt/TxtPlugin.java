@@ -47,7 +47,7 @@ public class TxtPlugin extends FormatPlugin {
 		}
 
 		if (null == is) {
-			Log.e(TAG, "zlFile inputstream == null");
+			Logger.eLog(TAG, "zlFile inputstream == null");
 			return false;
 		}
 

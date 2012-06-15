@@ -13,7 +13,8 @@ package com.easyview.ebook.reader.easyviewer;
 import com.easyview.ebook.reader.engine.core.ERManager;
 import com.easyview.ebook.reader.engine.core.IEngineService;
 import com.easyview.ebook.reader.engine.util.Logger;
-import com.easyview.ebook.reader.ui.controller.ControlCenter;
+import com.easyview.ebook.reader.ui.controller.ControlCenterStyleFlat;
+import com.easyview.ebook.reader.ui.controller.ControlCenterStyleGrid;
 import com.easyview.ebook.reader.ui.controller.IControlCenterService;
 
 import android.app.Application;
@@ -57,7 +58,11 @@ public class EasyViewerApplication extends Application {
 
 	public void free() {
 		ERManager.free();
-		ControlCenter.getInstance().free();
+		// grid style
+		// ControlCenterStyleGrid.getInstance().free();
+		
+		// flat style
+		ControlCenterStyleFlat.getInstance().free();
 
 		mIees = null;
 		mIccs = null;
@@ -71,7 +76,11 @@ public class EasyViewerApplication extends Application {
 	}
 
 	private void initControlCenter() {
-		mIccs = ControlCenter.getInstance();
+		// grid style
+		// mIccs = ControlCenterStyleGrid.getInstance();
+		
+		// flat style
+		mIccs = ControlCenterStyleFlat.getInstance();
 	}
 
 }

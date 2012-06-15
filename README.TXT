@@ -1,6 +1,14 @@
 ChangeLog
 =========
 
+0.5.9
+Update: 2012-06-15 17:19:33
+1. 修正数据库查询书籍ID的bug
+2. 添加Style Flat模式的UI
+3. 添加“本地文件”和“最近阅读”查询功能
+4. 添加若干图标
+5. 移除.svn和无用的文件夹
+
 0.5.8
 1. change com.foxconn to com.easyview
 

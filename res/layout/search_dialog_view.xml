@@ -2,26 +2,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="wrap_content" android:layout_height="wrap_content">
 	<com.easyview.ebook.reader.ui.view.SearchDialogView
-		android:layout_width="580px" android:layout_height="40px"
-		android:layout_gravity="left">
+		android:layout_width="480px" android:layout_height="wrap_content"
+		android:background="@color/white" >
 
-		<EditText android:id="@+id/id_search_edit"
-			android:layout_width="300px" android:layout_height="40px" />
+	    <RelativeLayout android:id="@+id/search_layout_wrapper"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" >
+			<EditText android:id="@+id/id_search_edit"
+				android:layout_width="200px" android:layout_height="58px" />
 
-		<Button android:id="@+id/id_search_button" android:text="@string/search"
-			android:layout_width="60px" android:layout_height="40px"
-			android:layout_toRightOf="@+id/id_search_edit" />
+			<ImageButton android:id="@+id/id_search_button"
+				android:layout_width="48px" android:layout_height="48px"
+				android:layout_toRightOf="@+id/id_search_edit"
+				android:background="@drawable/search" />
 
-		<Button android:id="@+id/id_search_exit" android:text="@string/search_exit"
-			android:layout_width="60px" android:layout_height="40px"
-			android:layout_toRightOf="@+id/id_search_button" />
+			<ImageButton android:id="@+id/id_search_exit"
+				android:layout_width="48px" android:layout_height="48px"
+				android:layout_toRightOf="@+id/id_search_button"
+				android:background="@drawable/exit" />
 
-		<Button android:id="@+id/id_search_previous" android:text="@string/search_previous"
-			android:layout_width="60px" android:layout_height="40px"
-			android:layout_marginLeft="460px" />
+			<ImageButton android:id="@+id/id_search_previous"
+				android:layout_width="48px" android:layout_height="48px"
+				android:layout_marginLeft="360px"
+				android:background="@drawable/prev" />
 
-		<Button android:id="@+id/id_search_next" android:text="@string/search_next"
-			android:layout_width="60px" android:layout_height="40px"
-			android:layout_toRightOf="@+id/id_search_previous" />
+			<ImageButton android:id="@+id/id_search_next"
+				android:layout_width="48px" android:layout_height="48px"
+				android:layout_toRightOf="@+id/id_search_previous"
+				android:background="@drawable/next" />
+		</RelativeLayout>
 	</com.easyview.ebook.reader.ui.view.SearchDialogView>
 </RelativeLayout>

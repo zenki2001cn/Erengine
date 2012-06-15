@@ -231,6 +231,11 @@ public class FbreaderWrapper extends ReaderWrapper {
 				String author = mAdapter.getAuthor();
 				String encoding = mAdapter.getEncoding();
 				String language = mAdapter.getLanguage();
+				
+//				Logger.dLog(TAG, "FbreaderWrapper debug title = " + title + 
+//						" author = " + author + 
+//						" encoding = " + encoding + 
+//						" language = " + language);
 
 				data.setValue(Book.MetaData.META_TITLE,
 						((title != null) ? title : Book.VALUE_NULL));
@@ -242,6 +247,8 @@ public class FbreaderWrapper extends ReaderWrapper {
 						((language != null) ? language : Book.VALUE_NULL));
 				book.setMetaData(data);
 			}
+			
+//			data.dumpvalue();
 
 			int totalNumber = mAdapter.getTotalPageNum();
 			setCurFontLevel(fontSize2Level(mAdapter.getFontSize()));

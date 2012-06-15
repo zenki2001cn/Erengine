@@ -274,7 +274,7 @@ public class BookReader {
 							.wrap(myUnderflowByteBuffer);
 					myByteDecoder.decode(ubb, cb, false);
 				} catch (Exception e) {
-					Log.e(TAG, "addByteData error = " + e);
+					Logger.eLog(TAG, "addByteData error = " + e);
 					break;
 				}
 				if (cb.position() != oldLength) {

@@ -1305,12 +1305,12 @@ public class AdobeWrapper extends ReaderWrapper {
 		if (book.getCurPage().getLinkCount() > 0) {
 			String[] urlStrings = new String[1];
 			int code = mAdapter.linkTest(x, y, urlStrings);
-			Log.d(TAG, "iTouchLinkToOpen code: " + code);
+			Logger.dLog(TAG, "iTouchLinkToOpen code: " + code);
 			if (code == 1) {
-				Log.d(TAG, "iTouchLinkToOpen External link, url= "
+				Logger.dLog(TAG, "iTouchLinkToOpen External link, url= "
 						+ urlStrings[0]);
 			} else if (code == 2) {
-				Log.d(TAG, "iTouchLinkToOpen Internal link");
+				Logger.dLog(TAG, "iTouchLinkToOpen Internal link");
 				try {
 					getPage(curPage);
 					setBorder(false);

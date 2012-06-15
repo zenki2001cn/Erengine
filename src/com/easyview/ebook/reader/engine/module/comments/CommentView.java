@@ -56,12 +56,12 @@ public class CommentView extends View {
 //			}
 //			
 //			String commentText = inputText.trim();
-//			Log.d(TAG, "comment Text = " + commentText);
+//			Logger.dLog(TAG, "comment Text = " + commentText);
 //		}
 //	};
 //
 //	public boolean onKeyLongPress(int keyCode, android.view.KeyEvent event) {
-//		Log.d(TAG, "onKeyLongPress code = " + keyCode + " event = " + event);
+//		Logger.dLog(TAG, "onKeyLongPress code = " + keyCode + " event = " + event);
 //		
 //		return super.onKeyLongPress(keyCode, event);
 //	};

@@ -487,7 +487,7 @@ public class ERSqliteProvider extends ContentProvider {
 		}
 
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-			Log.d(TAG, "=============== upgrade database" + "oldVersion is:"
+			Logger.dLog(TAG, "=============== upgrade database" + "oldVersion is:"
 					+ oldVersion + "newVersion is:" + newVersion
 					+ "DATABASE_VERSION is:" + DATABASE_VERSION);
 			upgradeBookTable(db, oldVersion, newVersion);

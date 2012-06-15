@@ -162,7 +162,7 @@ public class CommentHandler {
 		// mCommentEngine.refresh();
 		// } catch (Exception e) {
 		// e.printStackTrace();
-		// Log.e(TAG, "saveComment error");
+		// Logger.eLog(TAG, "saveComment error");
 		// }
 		//
 		// AdobeReader.whetherMenuViewClick = true;
@@ -213,7 +213,7 @@ public class CommentHandler {
 		// 通过refresh刷新数据
 		// int id = (int) book.getId();
 		// String location = book.getCurPage().getLocation();
-		// Log.e(TAG, "loadCOmment id = " + id + " location = " + location);
+		// Logger.eLog(TAG, "loadCOmment id = " + id + " location = " + location);
 		// if (id < 0 || TextUtils.isEmpty(location)) {
 		// Log.w(TAG, "error: getbookmark is faild.");
 		// return false;

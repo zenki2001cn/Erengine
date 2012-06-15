@@ -75,7 +75,7 @@ public class Adobe {
 			} catch (Exception ee) {
 				flag = false;
 			}
-			Log.i("AdobeNativeInterface", "renameTO()" + flag);
+			Logger.dLog("AdobeNativeInterface", "renameTO()" + flag);
 			if (flag)
 				return dfile;
 			else

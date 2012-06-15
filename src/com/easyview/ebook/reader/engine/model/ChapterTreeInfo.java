@@ -56,13 +56,13 @@ public class ChapterTreeInfo {
 	}
 
 	protected int getCurChapterIndex() {
-		Log.d(TAG, "get curChapterIndex: " + curChapterIndex);
+		Logger.dLog(TAG, "get curChapterIndex: " + curChapterIndex);
 		return curChapterIndex;
 	}
 
 	protected void setCurChapterIndex(int curChapterIndex) {
 		this.curChapterIndex = curChapterIndex;
-		Log.d(TAG, "set curChapterIndex: " + curChapterIndex);
+		Logger.dLog(TAG, "set curChapterIndex: " + curChapterIndex);
 	}
 
 	protected ChapterTreeState getState() {
@@ -74,12 +74,12 @@ public class ChapterTreeInfo {
 	}
 
 	protected int getMaxChapterNum() {
-		Log.d(TAG, "get maxChapterNum: " + maxChapterNum);
+		Logger.dLog(TAG, "get maxChapterNum: " + maxChapterNum);
 		return maxChapterNum;
 	}
 
 	protected void setMaxChapterNum(int maxChapterNum) {
-		Log.d(TAG, "set maxChapterNum: " + maxChapterNum);
+		Logger.dLog(TAG, "set maxChapterNum: " + maxChapterNum);
 		this.maxChapterNum = maxChapterNum;
 	}
 
@@ -202,7 +202,7 @@ public class ChapterTreeInfo {
 				break;
 			}
 		}
-		// Log.d(TAG, "title next chapter index: " + nextChapterIndex);
+		// Logger.dLog(TAG, "title next chapter index: " + nextChapterIndex);
 		return nextChapterIndex;
 	}
 

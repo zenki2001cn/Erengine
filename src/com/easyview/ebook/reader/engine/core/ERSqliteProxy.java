@@ -389,7 +389,7 @@ public class ERSqliteProxy implements IDatabaseService {
 			String lastLocation = c.getString(3);
 			int lastPageNum = c.getInt(4);
 			int totalPageNum = c.getInt(5);
-			int lastAccessTime = c.getInt(6);
+			long lastAccessTime = c.getLong(6);
 			String title = c.getString(7);
 			String author = c.getString(8);
 			String publisher = c.getString(9);

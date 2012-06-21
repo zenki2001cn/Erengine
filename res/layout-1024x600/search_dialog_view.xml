@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content">
+	<com.easyview.ebook.reader.ui.view.SearchDialogView
+		android:layout_width="480px" android:layout_height="wrap_content"
+		android:background="@color/white" >
+
+	    <RelativeLayout android:id="@+id/search_layout_wrapper"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" >
+			<EditText android:id="@+id/id_search_edit"
+				android:layout_width="200px" android:layout_height="58px" />
+
+			<ImageButton android:id="@+id/id_search_button"
+				android:layout_width="48px" android:layout_height="48px"
+				android:layout_toRightOf="@+id/id_search_edit"
+				android:background="@drawable/search" />
+
+			<ImageButton android:id="@+id/id_search_exit"
+				android:layout_width="48px" android:layout_height="48px"
+				android:layout_toRightOf="@+id/id_search_button"
+				android:background="@drawable/exit" />
+
+			<ImageButton android:id="@+id/id_search_previous"
+				android:layout_width="48px" android:layout_height="48px"
+				android:layout_marginLeft="360px"
+				android:background="@drawable/prev" />
+
+			<ImageButton android:id="@+id/id_search_next"
+				android:layout_width="48px" android:layout_height="48px"
+				android:layout_toRightOf="@+id/id_search_previous"
+				android:background="@drawable/next" />
+		</RelativeLayout>
+	</com.easyview.ebook.reader.ui.view.SearchDialogView>
+</RelativeLayout>

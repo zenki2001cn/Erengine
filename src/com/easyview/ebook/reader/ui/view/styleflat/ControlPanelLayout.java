@@ -63,6 +63,7 @@ public class ControlPanelLayout extends EVBaseRelativeLayout {
 	private TextView mTextBack;
 	private RelativeLayout mLayoutTopicWapper;
 	private RelativeLayout mLayoutBookmarkWapper;
+	private RelativeLayout mLayoutAboutWapper;
 
 	public ControlPanelLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -129,6 +130,9 @@ public class ControlPanelLayout extends EVBaseRelativeLayout {
 		
 		// 书签
 		mLayoutBookmarkWapper = (RelativeLayout) findViewById(R.id.id_bookmark_wrapper_flat);
+		
+		// 关于
+		mLayoutAboutWapper = (RelativeLayout) findViewById(R.id.id_about_wrapper_flat);
 		
 		// mLayoutJumpWapper = (RelativeLayout)
 		// findViewById(R.id.id_jump_wrapper);
@@ -225,6 +229,10 @@ public class ControlPanelLayout extends EVBaseRelativeLayout {
 		if (mLayoutBookmarkWapper != null) {
 			mLayoutBookmarkWapper.setVisibility(View.INVISIBLE);
 		}
+		
+		if (mLayoutAboutWapper != null) {
+			mLayoutAboutWapper.setVisibility(View.INVISIBLE);
+		}
 	}
 
 	private void enterLevel2() {
@@ -267,6 +275,9 @@ public class ControlPanelLayout extends EVBaseRelativeLayout {
 			case 2:
 				enterSearchLayout();
 				break;
+			case 3:
+				enterAboutLayout();
+				break;
 
 			default:
 				break;
@@ -288,6 +299,11 @@ public class ControlPanelLayout extends EVBaseRelativeLayout {
 	public void enterSearchLayout() {
 		getControlCenter().runCommand(COMMAND_TYPE.CMD_HIDE_CONTROL_CENTER);
 		getControlCenter().runCommand(COMMAND_TYPE.CMD_SHOW_SEARCH);
+	}
+	
+	public void enterAboutLayout() {
+		mCurrentEnterView = mLayoutAboutWapper;
+		enterLevel2();
 	}
 	
 	private OnClickListener cBtnExitListener = new OnClickListener() {

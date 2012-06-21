@@ -59,6 +59,11 @@
 				android:text="@string/default_page" android:gravity="right"
 				android:layout_marginLeft="10px" android:layout_marginTop="2px"
 				android:layout_below="@+id/id_page_progress" />
+			<TextView android:id="@+id/id_time_info"
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				android:text="@string/default_time" android:gravity="right"
+				android:layout_marginLeft="400px" android:layout_marginTop="2px"
+				android:layout_below="@+id/id_page_progress" />
 		</RelativeLayout>
 	</com.easyview.ebook.reader.ui.view.BottomBarLayout>
 </LinearLayout>

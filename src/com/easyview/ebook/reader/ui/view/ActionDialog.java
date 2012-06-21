@@ -127,12 +127,15 @@ public class ActionDialog implements IActionCall {
 
 		switch (mDefaultType) {
 		case TYPE_ALERT_DIALOG:
+			Logger.eLog(TAG, "createAlertDialog TYPE_ALERT_DIALOG");
 			createAlertDialog();
 			break;
 		case TYPE_TOAST:
+			Logger.eLog(TAG, "createAlertDialog TYPE_TOAST");
 			createToast();
 			break;
 		case TYPE_CUSTOM_DIALOG:
+			Logger.eLog(TAG, "createAlertDialog TYPE_CUSTOM_DIALOG");
 			createCustomDialog();
 			break;
 
@@ -151,6 +154,11 @@ public class ActionDialog implements IActionCall {
 				closeDialog();
 			}
 		});
+		
+		WindowManager.LayoutParams params = mAlertDlg.getWindow().getAttributes();
+		params.width = LayoutParams.WRAP_CONTENT;
+		params.height = LayoutParams.WRAP_CONTENT;
+		mAlertDlg.getWindow().setAttributes(params);
 		mAlertDlg.show();
 	}
 

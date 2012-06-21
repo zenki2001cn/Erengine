@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:layout_gravity="left">
+
+	<TextView android:id="@+id/id_dlg_bookmark_summary_flat"
+		android:text="" android:layout_width="250px" android:textSize="20px"
+		android:layout_height="150px" />
+
+	<RelativeLayout android:id="@+id/id_bookmark_inner_flat"
+		android:layout_below="@+id/id_dlg_bookmark_summary_flat" android:layout_marginTop="40px"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<Button android:id="@+id/id_dlg_goto_bookmark_flat"
+			android:text="@string/bookmark_menu_goto_bookmark"
+			android:layout_width="120px" android:textSize="20px"
+			android:layout_height="wrap_content" android:singleLine="true" />
+
+		<Button android:id="@+id/id_dlg_del_bookmark_flat" android:text="@string/bookmark_menu_del_bookmark"
+			android:layout_toRightOf="@+id/id_dlg_goto_bookmark_flat"
+			android:layout_width="120px" android:textSize="20px"
+			android:layout_height="wrap_content" />
+	</RelativeLayout>
+</LinearLayout>

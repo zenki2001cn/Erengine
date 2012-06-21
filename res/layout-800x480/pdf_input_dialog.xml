@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:orientation="horizontal">
+
+	<EditText android:id="@+id/password" android:layout_height="wrap_content"
+		android:layout_width="200px" android:layout_marginLeft="20px"
+		android:layout_marginRight="20px" android:autoText="false"
+		android:capitalize="none" android:gravity="fill_horizontal" />
+
+	<Button android:id="@+id/sure" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_marginLeft="20px"
+		android:layout_marginRight="20px" android:text="@string/sure"
+		android:gravity="left" />
+
+</LinearLayout>

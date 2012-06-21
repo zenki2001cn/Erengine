@@ -18,7 +18,7 @@
 		android:gravity="center_vertical" android:layout_below="@+id/title_bar">
 		<com.easyview.ebook.reader.ui.view.RenderView
 			android:id="@+id/id_book_content" android:layout_width="fill_parent"
-			android:layout_height="700px" android:layout_marginLeft="10px"
+			android:layout_height="920px" android:layout_marginLeft="10px"
 			android:layout_marginRight="10px" />
 
 		<!--  
@@ -41,7 +41,7 @@
 	<com.easyview.ebook.reader.ui.view.BottomBarLayout
 		android:id="@+id/id_bottom_bar" android:layout_width="fill_parent"
 		android:layout_height="40px" android:layout_gravity="center_vertical"
-		android:layout_marginTop="10px"
+		android:layout_marginTop="20px"
 		android:layout_below="@+id/content_view">
 
 	    <RelativeLayout android:id="@+id/bottom_layout_wrapper"
@@ -58,6 +58,11 @@
 				android:layout_height="wrap_content" android:layout_width="wrap_content"
 				android:text="@string/default_page" android:gravity="right"
 				android:layout_marginLeft="10px" android:layout_marginTop="2px"
+				android:layout_below="@+id/id_page_progress" />
+			<TextView android:id="@+id/id_time_info"
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				android:text="@string/default_time" android:gravity="right"
+				android:layout_marginLeft="520px" android:layout_marginTop="2px"
 				android:layout_below="@+id/id_page_progress" />
 		</RelativeLayout>
 	</com.easyview.ebook.reader.ui.view.BottomBarLayout>

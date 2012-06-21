@@ -7,12 +7,12 @@
 		android:layout_width="fill_parent" android:layout_height="wrap_content" >
 		<ImageButton android:id="@+id/id_browser_local_path"
 		    android:background="@drawable/local_path"
-			android:layout_marginLeft="0px" 
+			android:layout_marginLeft="20px" 
 			android:layout_width="240px" android:layout_height="64px" />
 		<ImageButton android:id="@+id/id_browser_recent_path"
 		    android:background="@drawable/recent_reading"
 		    android:layout_toRightOf="@+id/id_browser_local_path"
-			android:layout_marginLeft="0px" 
+			android:layout_marginLeft="50px" 
 			android:layout_width="240px" android:layout_height="64px" />
 	</RelativeLayout>
 	

@@ -3,20 +3,20 @@
 	android:layout_width="wrap_content" android:layout_height="wrap_content" >
 
 	<com.easyview.ebook.reader.ui.view.styleflat.ControlPanelLayout
-		android:id="@+id/id_panel_wrapper_flat" android:layout_width="350px"
-		android:layout_height="800px" android:orientation="vertical">
+		android:id="@+id/id_panel_wrapper_flat" android:layout_width="450px"
+		android:layout_height="1024px" android:orientation="vertical">
 	
 	    <RelativeLayout android:id="@+id/id_title_wrapper_flat"
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
 			android:visibility="visible">
 	    	<TextView android:id="@+id/id_panel_title_flat"
 		    	android:text="@string/panel_title_flat"
-             android:textSize="35px"
+		    	android:textSize="35px"
 				android:layout_marginLeft="25px" android:layout_marginTop="40px"
 				android:layout_width="wrap_content" android:layout_height="wrap_content" />
 	    	<TextView android:id="@+id/id_back_text_flat" 
 	    	    android:text="@string/panel_back" android:textSize="35px"
-				android:layout_marginLeft="240px" android:layout_marginTop="40px"
+				android:layout_marginLeft="350px" android:layout_marginTop="40px"
 				android:layout_width="wrap_content" android:layout_height="wrap_content" />
 	    	<ImageView android:id="@+id/id_panel_title_split_flat"
 	    	    android:layout_below="@+id/id_panel_title_flat"
@@ -38,15 +38,15 @@
 	    <!-- 章节列表栏 -->
 		<RelativeLayout android:id="@+id/id_topic_wrapper_flat"
 			android:tag="@string/col_topic"  
-			android:layout_below="@+id/id_title_wrapper_flat"
+			android:layout_below="@+id/id_title_wrapper_flat" 
 			android:layout_marginTop="20px" 
-			android:layout_marginLeft="5px" android:layout_marginRight="5px"
+          android:layout_marginLeft="10px" android:layout_marginRight="10px"
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
 			android:visibility="invisible">
 			<ListView android:id="@+id/id_topic_list_flat"
 			    android:textSize="26px"
 				android:layout_width="wrap_content"
-				android:layout_height="550px" >
+				android:layout_height="750px" >
 			</ListView>
 		</RelativeLayout>
 		
@@ -59,16 +59,16 @@
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
 			android:visibility="invisible">
 			<ListView android:id="@+id/id_bookmark_list_flat"
-				android:layout_width="300px"
-				android:layout_height="550px" />
+				android:layout_width="400px"
+				android:layout_height="750px" />
 			<Button android:id="@+id/id_bookmark_add_flat" android:text="@string/bookmark_menu_add_bookmark"
 				android:layout_below="@+id/id_bookmark_list_flat" 
 				android:layout_marginLeft="10px"
-				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+				android:layout_width="180px" android:layout_height="wrap_content" />
 			<Button android:id="@+id/id_bookmark_clean_flat" android:text="@string/bookmark_clean"
-			    android:layout_marginLeft="40px"
 				android:layout_below="@+id/id_bookmark_list_flat" android:layout_toRightOf="@+id/id_bookmark_add_flat"
-				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+				android:layout_marginLeft="40px"
+				android:layout_width="180px" android:layout_height="wrap_content" />
 		</com.easyview.ebook.reader.ui.view.styleflat.BookmarkPanelLayout>
 		
 		<!-- 关于 -->

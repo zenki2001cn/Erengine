@@ -4,6 +4,19 @@
         <item>@string/col_topic</item>
         <item>@string/col_bookmark</item>
         <item>@string/col_search</item>
+        <item>@string/col_about</item>
         <!-- <item>@string/col_jump</item> -->
+    </string-array>
+    
+	<string-array name = "about_title_array" >
+        <item>@string/about_title_item1</item>
+        <item>@string/about_title_item2</item>
+        <item>@string/about_title_item3</item>
+    </string-array>
+    
+	<string-array name = "about_desc_array" >
+        <item>@string/about_desc_item1</item>
+        <item>@string/about_desc_item2</item>
+        <item>@string/about_desc_item3</item>
     </string-array>
 </resources>

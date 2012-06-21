@@ -6,7 +6,16 @@
     
     <!-- control_panel_flat.xml -->
 	<string name="panel_title_flat">功能菜单</string>
-
+	<string name="panel_about_flat">关于</string>
+	
+	<!-- about list item -->
+	<string name="about_title_item1">软件说明</string>
+	<string name="about_desc_item1">Easyview是一款电子书阅读器软件，\n支持格式epub、txt、html。\n\nEpub：支持中文、日文、英文、阿拉伯、法文、西班牙、葡萄牙、俄文等多种语言。\nTxt：支持GBK、GB2312、UTF8编码。\nHtml支持纯文字模式。\n\n目前支持设备分辨率：800x480、1024x600</string>
+	<string name="about_title_item2">当前版本</string>
+	<string name="about_desc_item2">0.5.9</string>
+	<string name="about_title_item3">邮箱地址</string>
+	<string name="about_desc_item3">zenki2001cn@163.com</string>
+	
 	<!-- main.xml -->
 	<string name="app_name">EasyView</string>
 	<string name="alert_illegal_page">页码无效</string>
@@ -15,6 +24,7 @@
 	<string name="loading">Loading...</string>
 	<string name="password">请输入密码</string>
 	<string name="default_page">页码</string>
+	<string name="default_time">时间</string>
 	<string name="book_title">书名</string>
 	<string name="load_chapter">加载章节</string>
 	<string name="jump_page">跳转页码</string>
@@ -32,6 +42,7 @@
 	<string name="col_jump">跳转</string>
 	<string name="col_search">查找</string>
 	<string name="col_bookmark">书签</string>
+	<string name="col_about">关于</string>
 	<string name="col_5_xxx">批注</string>
 	<string name="col_6_xxx">朗读</string>
 	<string name="col_7_xxx">音乐</string>
@@ -73,7 +84,7 @@
 	<string name="bookmark_del_success">删除书签成功</string>
 	<string name="bookmark_add">正在添加书签</string>
 	<string name="bookmark_del">正在删除书签</string>
-	<string name="bookmark_clean">清空书签列表</string>
+	<string name="bookmark_clean">清空书签</string>
 	<string name="bookmark_item_page_format">第%d页</string>
 	<string name="bookmark_menu_goto_bookmark">定位书签</string>
 	<string name="bookmark_menu_del_bookmark">删除书签</string>

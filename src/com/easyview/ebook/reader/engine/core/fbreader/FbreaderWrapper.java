@@ -13,7 +13,6 @@ package com.easyview.ebook.reader.engine.core.fbreader;
 import org.geometerplus.zlibrary.text.model.ZLTextMark;
 
 import android.graphics.Bitmap;
-import android.graphics.Matrix;
 
 import com.easyview.ebook.reader.engine.core.DecAdapter;
 import com.easyview.ebook.reader.engine.core.EngineCode;
@@ -248,6 +247,10 @@ public class FbreaderWrapper extends ReaderWrapper {
 				book.setMetaData(data);
 			}
 			
+			// 获取封面图片路径
+//			Logger.dLog(TAG, "getCover = " + mAdapter.getCoverUri());
+			
+			// 打印metadata信息
 //			data.dumpvalue();
 
 			int totalNumber = mAdapter.getTotalPageNum();

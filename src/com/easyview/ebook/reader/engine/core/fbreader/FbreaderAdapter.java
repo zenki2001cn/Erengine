@@ -26,7 +26,9 @@ import org.geometerplus.fbreader.fbreader.FBReaderApp;
 import org.geometerplus.fbreader.fbreader.FBView;
 import org.geometerplus.fbreader.library.Author;
 import org.geometerplus.fbreader.library.Book;
+import org.geometerplus.fbreader.library.Library;
 import org.geometerplus.zlibrary.core.filesystem.ZLFile;
+import org.geometerplus.zlibrary.core.image.ZLImage;
 import org.geometerplus.zlibrary.core.options.ZLIntegerRangeOption;
 import org.geometerplus.zlibrary.core.sqliteconfig.ZLSQLiteConfig;
 import org.geometerplus.zlibrary.core.view.ZLView;
@@ -278,6 +280,16 @@ public class FbreaderAdapter extends DecAdapter {
 		return curPageNum;
 	}
 
+	protected String getCoverUri() {
+		ZLImage image = Library.getCover(mZlfile);
+		
+		if (image != null) {
+			return image.getURI();
+		} else {
+			return "null";
+		}
+	}
+	
 	protected String getAuthor() {
 		Logger.vLog(TAG, "getAuthor enter>>>");
 

@@ -67,7 +67,7 @@ public class ERSqliteProvider extends ContentProvider {
 				+ BookColumns.LAST_LOCATION + " TEXT, "
 				+ BookColumns.LAST_PAGE_NUM + " INTEGER, "
 				+ BookColumns.TOTAL_PAGE_NUM + " INTEGER, "
-				+ BookColumns.LAST_ACCESS_TIME + " INTEGER, "
+				+ BookColumns.LAST_ACCESS_TIME + " BIGINT, "
 				+ BookColumns.META_TITLE + " TEXT, "
 				+ BookColumns.META_AUTHOR + " TEXT, "
 				+ BookColumns.META_PUBLISHER + " TEXT, "

@@ -124,8 +124,9 @@ public class EasyViewer extends Activity {
 					}
 				} else {
 					Logger.eLog(TAG, "Open Book get fileName error");
-					finish();
+					exit();
 				}
+				
 				break;
 
 			default:
@@ -170,6 +171,7 @@ public class EasyViewer extends Activity {
 	@Override
 	protected void onDestroy() {
 		Logger.dLog(TAG, "onDestroy");
+		
 		closeBook();
 		free();
 
@@ -228,7 +230,7 @@ public class EasyViewer extends Activity {
 			@Override
 			public void handleError() {
 				// 退出
-				finish();
+				exit();
 			}
 		};
 
@@ -353,7 +355,7 @@ public class EasyViewer extends Activity {
 	// 修改默认配置
 	private EngineConfig initConfig() {
 		EngineConfig config = new EngineConfig();
-		config.setLogOn(true);
+		config.setLogOn(false);
 		config.setViewWidth(mRenderView.getWidth());
 		config.setViewHeight(mRenderView.getHeight());
 		config.setFontLevel(1);
@@ -364,7 +366,13 @@ public class EasyViewer extends Activity {
 	}
 
 	private void free() {
-		mEvApplication.free();
+		if (mBottomBarLayout != null) {
+			mBottomBarLayout.quitShowTimeInfo();
+		}
+		
+		if (mEvApplication != null) {
+			mEvApplication.free();
+		}
 	}
 
 	public Book getBook() {

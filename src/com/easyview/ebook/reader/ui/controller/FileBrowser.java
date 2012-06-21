@@ -14,9 +14,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -36,7 +34,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -72,6 +69,9 @@ public class FileBrowser extends Activity {
 
 	private final int MSG_REFRESH_LOCAL_LIST = 1;
 	private final int MSG_REFRESH_RECENT_LIST = 2;
+	
+	private final int ACITVITY_REQUEST_CODE = 0;
+	public static String RESULT_UPDATE_RECENT_LIST = "UpdateRecent";
 
 	Handler mHandler = new Handler() {
 		@Override
@@ -112,8 +112,7 @@ public class FileBrowser extends Activity {
 
 	@Override
 	protected void onResume() {
-		mScanLocalPath = mSharedPreferences.getString(KEY_SCAN_PATH,
-				EXTERNAL_PATH);
+		loadPreferences();
 
 		registerMediaReceiver();
 
@@ -122,9 +121,7 @@ public class FileBrowser extends Activity {
 
 	@Override
 	protected void onPause() {
-		SharedPreferences.Editor edit = mSharedPreferences.edit();
-		edit.putString(KEY_SCAN_PATH, mScanLocalPath);
-		edit.commit();
+		savePreferences();
 
 		unregisterMediaReceiver();
 
@@ -135,7 +132,27 @@ public class FileBrowser extends Activity {
 	protected void onDestroy() {
 		super.onDestroy();
 	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		
+		if (requestCode == ACITVITY_REQUEST_CODE) {
+			Log.e(TAG, "onActivityResult resultCode = " + resultCode);
+		}
+	}
 
+	private void loadPreferences() {
+		mScanLocalPath = mSharedPreferences.getString(KEY_SCAN_PATH,
+				EXTERNAL_PATH);
+	}
+	
+	private void savePreferences() {
+		SharedPreferences.Editor edit = mSharedPreferences.edit();
+		edit.putString(KEY_SCAN_PATH, mScanLocalPath);
+		edit.commit();
+	}
+	
 	public void initView() {
 		mLocalListView = (ListView) findViewById(R.id.id_file_list);
 		mRecentListView = (ListView) findViewById(R.id.id_recent_list);
@@ -177,7 +194,7 @@ public class FileBrowser extends Activity {
 				i.setComponent(comp);
 				i.putExtras(bundle);
 				// i.setAction("android.intent.action.VIEW");
-				startActivityForResult(i, 0);
+				startActivityForResult(i, ACITVITY_REQUEST_CODE);
 			} else if (file.isDirectory()) {
 				Log.d(TAG, "file is dir " + file.getAbsolutePath());
 				refreshLocalList(pathName);
@@ -212,7 +229,7 @@ public class FileBrowser extends Activity {
 						"com.easyview.ebook.reader.ui.controller.EasyViewer");
 				i.setComponent(comp);
 				i.putExtras(bundle);
-				startActivityForResult(i, 0);
+				startActivityForResult(i, ACITVITY_REQUEST_CODE);
 			}
 		}
 	};
@@ -320,29 +337,45 @@ public class FileBrowser extends Activity {
 		public void run() {
 			mIds = (IDatabaseService) ERManager
 					.getService(ERManager.DATABASE_SERVICE);
-
-			int[] bookIds = mIds.queryBooksId();
+			mRecentListItems.clear();
 			int len = 0;
+			
+			// 查询文件名
+			String[] filePaths = mIds.queryBooksPath();
+			if (filePaths != null) {
+				len = filePaths.length;
+			}
+			for (int i = 0; i < len; i++) {
+				File file = new File(filePaths[i]);
+				mRecentListItems.add(new RecentListItem(file.getName(), file.getAbsolutePath(),
+					"", "", ""));
+			}
+			mHandler.sendEmptyMessage(MSG_REFRESH_RECENT_LIST);
+			
+			// 查询其他信息
+			ArrayList<RecentListItem> recentListTemp = new ArrayList<FileBrowser.RecentListItem>();
+			len = 0;
+			int[] bookIds = mIds.queryBooksId();
 			if (bookIds != null) {
 				len = bookIds.length;
 			}
 
-			mRecentListItems.clear();
 			for (int i = 0; i < len; i++) {
 				Book book = new Book(bookIds[i]);
 				if (mIds.queryBook(book)) {
 					String fileName = book.getBookName();
 					String filePath = book.getBookPath();
-					String author = book.getAuthor();
+					String size = String.format("%.2f KB", (float)(book.getBookSize() / 1000.f));
 					String perString = book.getLastLocation();
 					
-					SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+					SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分");
 					String lastTime = sdf.format(new Date(book.getLastAccessTime()));
-					mRecentListItems.add(new RecentListItem(fileName, filePath,
-							author, perString, lastTime));
+					recentListTemp.add(new RecentListItem(fileName, filePath,
+							size, perString, lastTime));
 				}
 			}
 
+			mRecentListItems = recentListTemp;
 			mHandler.sendEmptyMessage(MSG_REFRESH_RECENT_LIST);
 
 			super.run();
@@ -442,15 +475,15 @@ public class FileBrowser extends Activity {
 	protected class RecentListItem {
 		String mFileName;
 		String mPathName;
-		String mAuthor;
+		String mSize;
 		String mPercent;
 		String mLastAccessTime;
 
-		public RecentListItem(String fileName, String pathName, String author,
+		public RecentListItem(String fileName, String pathName, String size,
 				String percent, String lastTime) {
 			mFileName = fileName;
 			mPathName = pathName;
-			mAuthor = author;
+			mSize = size;
 			mPercent = percent;
 			mLastAccessTime = lastTime;
 		}
@@ -463,8 +496,8 @@ public class FileBrowser extends Activity {
 			return mPathName;
 		}
 
-		public String getAuthor() {
-			return mAuthor;
+		public String getSize() {
+			return mSize;
 		}
 
 		public String getPercent() {
@@ -525,13 +558,13 @@ public class FileBrowser extends Activity {
 			imageView = (ImageView) view
 					.findViewById(R.id.id_recent_filetype_image);
 			fileNameTv = (TextView) view.findViewById(R.id.id_recent_filename);
-			authorTv = (TextView) view.findViewById(R.id.id_recent_author);
+			authorTv = (TextView) view.findViewById(R.id.id_recent_size);
 			percentAndTimeTv = (TextView) view
 					.findViewById(R.id.id_recent_time_and_percent);
 
 			// set content
 			fileNameTv.setText(item.getFileName());
-			authorTv.setText(String.format("作者: %s", item.getAuthor()));
+			authorTv.setText(String.format("大小: %s", item.getSize()));
 
 			String strPercentAndTime = String.format("最后阅读: %s", item.getLastTime());
 			percentAndTimeTv.setText(strPercentAndTime);

@@ -29,7 +29,7 @@ public class TaskManager {
 	static private EngineCode mEngineError = null;
 
 	private boolean mServerQuit = false;
-	private boolean mServerRunning = false;
+	private volatile boolean mServerRunning = false;
 	private ActionTask mCurTask = null;
 
 	private TaskManager() {
@@ -55,7 +55,7 @@ public class TaskManager {
 		return mTaskManager;
 	}
 
-	private boolean hasElement() {
+	synchronized private boolean hasElement() {
 		if (mTaskQueue != null) {
 			return !mTaskQueue.isEmpty();
 		}
@@ -92,7 +92,7 @@ public class TaskManager {
 
 	}
 
-	protected void put(ActionTask task) {
+	synchronized protected void put(ActionTask task) {
 		if (mTaskQueue.size() > 5) {
 			return;
 		}
@@ -100,7 +100,7 @@ public class TaskManager {
 		put(task, false);
 	}
 
-	private ActionTask take() {
+	synchronized private ActionTask take() {
 		if ((mTaskQueue != null) && (mTaskQueue.size() > 0)) {
 			return mTaskQueue.remove(0);
 		}
@@ -256,7 +256,7 @@ public class TaskManager {
 		}
 	}
 
-	protected void clearTask() {
+	synchronized protected void clearTask() {
 		if ((mTaskQueue != null) && (mTaskQueue.size() > 0)) {
 			mTaskQueue.clear();
 		}
